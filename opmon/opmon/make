@@ -1,0 +1,28 @@
+#include "ahbuart.h"
+#include <stdio.h>
+// DCOM transmission Protocol
+// Write:
+// +--+-----+------------+---------------+-----------------------+
+// |11|LEN-1| ADDR[31:0] | DATA[0][31:0] |...| DATA[LEN-1][31:0] |
+// +--+-----+------------+---------------+-----------------------+
+// Read:
+// +--+-----+------------+----------------+------------------+
+// |10|LEN-1| ADDR[31:0] | ~~~~~~~~~~~~~~ | DATA[0][31:0]... |
+// +--+-----+------------+----------------+------------------+
+int WriteNWords(unsigned long dstaddr, unsigned long* buf, int n)
+{
+	return 0;
+}
+int ReadNWords(int device, unsigned long dstaddr, unsigned long* data, int n)
+{
+  unsigned char buf[512];
+	unsigned char *pBuf = buf;
+	DcomPacket *pk = (DcomPacket*)pBuf;
+	pk->ctrl = (2<<6) | (n-1);
+	pk->addr = dstaddr;
+	int nc;
+	nc = write(device, buf, sizeof(DcomPacket));
+	printf("Send %d bytes\n", nc);
+
+	return 0;
+}
