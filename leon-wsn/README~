@@ -1,0 +1,37 @@
+------------------------------
+-- eCos on LEON3 processor.	--
+-- LEON3 History			--
+-- by xiaoyang yi			--
+------------------------------
+2011-9-25
+	--create it.
+
+2011-9-25
+	--add ov9650 driver. 
+
+2011-10-25
+	--add FATFS
+
+------------------------------
+-- IO Pins					--
+------------------------------
+gpio7 as MOSI
+gpio8 as MISO
+gpio9 as CLK
+
+IO_A [31]->Camera_Clk
+
+
+------------------------------
+-- I2C Pins 				--
+------------------------------
+IO_A [30]==PIN_N21, IO_A[31]==PIN_N24 
+set_location_assignment PIN_N21 -to I2C_SCL
+set_location_assignment PIN_N24 -to I2C_DAT
+
+------------------------------
+-- end						--
+------------------------------
+
+2011-11-3
+怪事，缓冲区一大于512，立马数据错误，小于512就对了。。。。

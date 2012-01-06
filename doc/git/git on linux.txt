@@ -1,0 +1,16 @@
+#-------------------------------
+# xiaoyang@2012-1-6
+# git在linux上搭建
+#-------------------------------
+
+git在linux上搭建比较简单。
+(1) 拥有github账号（如果是局域网则需要搭建本地git服务器），安装好git，git-gui，ssh-keygen等ssh工具，能够联网。
+(2) 产生并上传 SSH 公钥
+    ssh-keygen -t rsa # 产生 id_rsa, id_rsa.pub
+    mv id_rsa ~/.ssh/ # 将 id_rsa 放在 ~/.ssh/ 内.
+    scp id_rsa.pub example.com:/tmp/user1.pub # 将 id_rsa.pub 丢到 Server 上, 大家的 public key 都需要传到 Server 上.
+    scp id_rsa.pub example.com:/tmp/admin.pub # 管理者的 key 同 user key, 在此设为 admin.pub, 避免下述内容造成混淆. 
+(3) 如果上述方法没有成功可以使用git_gui图形工具产生密钥，再将公钥上传/粘帖到git-hub网站上。
+(4) git clone 已有的工程目录试试看是否成功。一般到这步就没有问题了。
+
+参考：http://www.linuxidc.com/Linux/2011-04/35036.htm

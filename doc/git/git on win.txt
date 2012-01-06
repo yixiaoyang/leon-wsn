@@ -1,0 +1,14 @@
+#-------------------------------
+# xiaoyang@2012-1-6
+# git在windows上搭建
+#-------------------------------
+
+需要软件 
+CopSSH  (服务器) 
+TortoiseGit (客户端,推荐) 
+Junction Link Magic (服务器，可选) 
+msysgit (服务器和客户端) 
+
+
+参考：
+http://www.congci.com/item/git-tools-github-windows

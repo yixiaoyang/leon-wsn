@@ -1,0 +1,33 @@
+#ifndef _OV7660_H
+#define _OV7660_H
+
+#include "gpio.h"
+#include "sccb.h"
+
+#define CHANGE_REG_NUM 320
+/*
+#define CMOS_CLK_DDR  DDRD
+#define CMOS_CLK_PORT PORTD
+#define CMOS_CLK_PIN  PIND
+#define CMOS_CLK_BIT  5
+
+#define CLK_ON	        CMOS_CLK_PORT|=1<<CMOS_CLK_BIT
+#define CLK_OFF		    CMOS_CLK_PORT&=~(1<<CMOS_CLK_BIT)
+*/
+
+#define CLK_ON	delay_us(1)     
+#define CLK_OFF	()
+
+/////////////////////////////////////////
+void CLK_init(void);
+int8u_t wrOV7660Reg(int8u_t regID, int8u_t regDat);
+int8u_t rdOV7660Reg(int8u_t regID, int8u_t *regDat);
+void OV7660_config_window(int32u_t startx,int32u_t starty,int32u_t width, int32u_t height);
+void my_delay_ms(int32u_t time);//delay some time
+int8u_t OV7660_init(void);
+
+
+#endif /* _OV7660_H */
+
+
+
