@@ -85,6 +85,7 @@ void serial_test()
 			printf("err:%d return!\n",err);
 		}else{
 			rcvstr[9]='\0';
+		}
     }
 
     printf("\ninput 12345678 please:");
