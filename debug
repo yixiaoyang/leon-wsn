@@ -1,0 +1,105 @@
+xiaoyang@xiaoyang leon-wsn$ grmon-eval -u -altjtag
+
+ GRMON LEON debug monitor v1.1.50 evaluation version
+
+ Copyright (C) 2004-2011 Aeroflex Gaisler - all rights reserved.
+ For latest updates, go to http://www.gaisler.com/
+ Comments or bug-reports to support@gaisler.com
+
+ This evaluation version will expire on 21/4/2012
+ using Altera JTAG cable
+ Selected cable 1 - USB-Blaster [4-1]
+JTAG chain:
+@1:  (0x020B60DD)
+Use device [1 - 1] as JTAG Debug Link:1
+Note this can also be specified with -jtagdevice X
+
+ GRLIB build version: 4104
+
+ initialising ............
+ detected frequency:  51 MHz
+ SRAM waitstates: 1
+
+ Component                            Vendor
+ LEON3 SPARC V8 Processor             Gaisler Research
+ AHB Debug JTAG TAP                   Gaisler Research
+ AHB Debug UART                       Gaisler Research
+ LEON2 Memory Controller              European Space Agency
+ AHB/APB Bridge                       Gaisler Research
+ 32-bit PC133 SDRAM Controller        Gaisler Research
+ LEON3 Debug Support Unit             Gaisler Research
+ Generic APB UART                     Gaisler Research
+ Multi-processor Interrupt Ctrl       Gaisler Research
+ Modular Timer Unit                   Gaisler Research
+ SPI Controller                       Gaisler Research
+ General purpose I/O port             Gaisler Research
+
+ Use command 'info sys' to print a detailed report of attached cores
+
+grlib> grlib> load leon3.elf
+section: .rom_vectors at 0x40000000, size 4944 bytes
+section: .text at 0x40001350, size 63088 bytes
+section: .rodata at 0x400109c0, size 2032 bytes
+section: .data at 0x400111b0, size 1312 bytes
+total size: 71376 bytes (1.1 Mbit/s) 
+read 368 symbols
+entry point: 0x40001104
+grlib> run
+�Interrupt stack(0): 0x400126e0-0x400136e0
+Interrupt stack(1): 0x40013710-0x40014710
+
+system init.
+rc=0 FR_OK
+FAT type = 0 (FAT32)
+Bytes/Cluster = 0
+Number of FATs = 0
+
+Opening "A.BMP"
+disk_initialize:SD Card Init ok!
+tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt�����������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������������Creating "B.BMP"
+Copying file...
+<-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-><-File1 reaches EOF
+1628214 bytes copied.
+test over!
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+Cannot continue, processor not in debug mode
+Cannot continue, processor not in debug mode
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+ WARNING: JTAG data not valid! AHB access did not complete, returning bad data.
+
+Interrupt!
+stopped at 0x00000000
+

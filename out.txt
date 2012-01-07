@@ -1,0 +1,63 @@
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes spi.c gpio.c > .depend
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+make[1]: “.depend”是最新的。
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/misc'
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes  > .depend
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/misc'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes uz2400d.c rf.c > .depend
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+make[1]: “.depend”是最新的。
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes netif.c translate.c > .depend
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+make[1]: “.depend”是最新的。
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o spi.o spi.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o gpio.o gpio.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/home/hgdytz/ecosworkspace/ecosdef_install/lib -Ttarget.ld -r -o hal.a spi.o gpio.o
+sparc-elf-ar crv hal.a spi.o gpio.o
+a - spi.o
+a - gpio.o
+sparc-elf-ranlib hal.a
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/HAL'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/misc'
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/home/hgdytz/ecosworkspace/ecosdef_install/lib -Ttarget.ld -r -o misc.a 
+sparc-elf-ar crv misc.a 
+sparc-elf-ranlib misc.a
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/misc'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o uz2400d.o uz2400d.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o rf.o rf.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/home/hgdytz/ecosworkspace/ecosdef_install/lib -Ttarget.ld -r -o bsp.a uz2400d.o rf.o
+sparc-elf-ar crv bsp.a uz2400d.o rf.o
+a - uz2400d.o
+a - rf.o
+sparc-elf-ranlib bsp.a
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/BSP'
+make[1]: 正在进入目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o netif.o netif.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes   -c -o translate.o translate.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/home/hgdytz/ecosworkspace/ecosdef_install/lib -Ttarget.ld -r -o stack.a netif.o translate.o
+sparc-elf-ar crv stack.a netif.o translate.o
+a - netif.o
+a - translate.o
+sparc-elf-ranlib stack.a
+make[1]:正在离开目录 `/home/hgdytz/ecosworkspace/leon3try/Stack'
+sparc-elf-gcc -c -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc -I/home/hgdytz/ecosworkspace/ecosdef_install/include -I/home/hgdytz/ecosworkspace/leon3try/includes lemon.c -o lemon.o
+sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/home/hgdytz/ecosworkspace/ecosdef_install/lib -Ttarget.ld  -o lemon.elf lemon.o HAL/hal.a  misc/misc.a  BSP/bsp.a Stack/stack.a 
+echo ".elf OK..."
+.elf OK...
+sparc-elf-objdump -D -x -s lemon.elf > lemon.dis
+sparc-elf-objcopy -O srec lemon.elf lemon.srec
+echo ".srec OK..."
+.srec OK...
+echo "End compiling~~~"
+End compiling~~~
