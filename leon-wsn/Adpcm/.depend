@@ -1,4 +1,4 @@
-adpcm.o: adpcm.c /opt/opdk/leon-wsn/includes/adpcm.h \
+adpcm.o: adpcm.c /opt/git-hub/leon-wsn/leon-wsn/includes/adpcm.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \

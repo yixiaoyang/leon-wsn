@@ -1,8 +1,9 @@
-uz2400d.o: uz2400d.c /opt/opdk/leon-wsn/includes/spi.h \
-  /opt/opdk/leon-wsn/includes/fpga.h /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/uz2400d.h
-rf.o: rf.c /opt/opdk/leon-wsn/includes/includes.h \
+uz2400d.o: uz2400d.c /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uz2400d.h
+rf.o: rf.c /opt/git-hub/leon-wsn/leon-wsn/includes/includes.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -59,21 +60,27 @@ rf.o: rf.c /opt/opdk/leon-wsn/includes/includes.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/hal/hal_amba.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/hal/hal_clock.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/memalloc/kapidata.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/spi.h \
-  /opt/opdk/leon-wsn/includes/fpga.h /opt/opdk/leon-wsn/includes/lemon.h \
-  /opt/opdk/leon-wsn/includes/netif.h /opt/opdk/leon-wsn/includes/gpio.h \
-  /opt/opdk/leon-wsn/includes/rf.h \
-  /opt/opdk/leon-wsn/includes/translate.h \
-  /opt/opdk/leon-wsn/includes/adpcm.h \
-  /opt/opdk/leon-wsn/includes/application.h \
-  /opt/opdk/leon-wsn/includes/data.h /opt/opdk/leon-wsn/includes/tools.h \
-  /opt/opdk/leon-wsn/includes/ieee802_15_4.h \
-  /opt/opdk/leon-wsn/includes/uz2400d.h \
-  /opt/opdk/leon-wsn/includes/VS1003x.h \
-  /opt/opdk/leon-wsn/includes/uart.h
-VS1003x.o: VS1003x.c /opt/opdk/leon-wsn/includes/VS1003x.h \
-  /opt/opdk/leon-wsn/includes/fpga.h /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/spi.h /opt/opdk/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/lemon.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/netif.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/rf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/translate.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/adpcm.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/application.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/data.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/tools.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ieee802_15_4.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uz2400d.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/VS1003x.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uart.h
+VS1003x.o: VS1003x.c /opt/git-hub/leon-wsn/leon-wsn/includes/VS1003x.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -97,13 +104,17 @@ VS1003x.o: VS1003x.c /opt/opdk/leon-wsn/includes/VS1003x.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/libc/string/bsdstring.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/limits.h \
   /opt/sparc/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/limits.h
-data.o: data.c /opt/opdk/leon-wsn/includes/data.h \
-  /opt/opdk/leon-wsn/includes/types.h
-ov7660.o: ov7660.c /opt/opdk/leon-wsn/includes/ov7660.h \
-  /opt/opdk/leon-wsn/includes/gpio.h /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/sccb.h /opt/opdk/leon-wsn/includes/led.h \
-  /opt/opdk/leon-wsn/includes/tools.h /opt/opdk/leon-wsn/includes/sd.h \
-  /opt/opdk/leon-wsn/includes/spi.h /opt/opdk/leon-wsn/includes/fpga.h \
+data.o: data.c /opt/git-hub/leon-wsn/leon-wsn/includes/data.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h
+ov7660.o: ov7660.c /opt/git-hub/leon-wsn/leon-wsn/includes/ov7660.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/sccb.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/led.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/tools.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/sd.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -127,15 +138,20 @@ ov7660.o: ov7660.c /opt/opdk/leon-wsn/includes/ov7660.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/libc/string/bsdstring.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/limits.h \
   /opt/sparc/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/limits.h \
-  /opt/opdk/leon-wsn/includes/FAT32.h /opt/opdk/leon-wsn/includes/sd.h \
-  /opt/opdk/leon-wsn/includes/ff.h /opt/opdk/leon-wsn/includes/integer.h \
-  /opt/opdk/leon-wsn/includes/ffconf.h \
-  /opt/opdk/leon-wsn/includes/diskio.h
-led.o: led.c /opt/opdk/leon-wsn/includes/led.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/gpio.h
-sd.o: sd.c /opt/opdk/leon-wsn/includes/sd.h \
-  /opt/opdk/leon-wsn/includes/spi.h /opt/opdk/leon-wsn/includes/fpga.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/FAT32.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/sd.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ff.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/integer.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ffconf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/diskio.h
+led.o: led.c /opt/git-hub/leon-wsn/leon-wsn/includes/led.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h
+sd.o: sd.c /opt/git-hub/leon-wsn/leon-wsn/includes/sd.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -159,12 +175,14 @@ sd.o: sd.c /opt/opdk/leon-wsn/includes/sd.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/libc/string/bsdstring.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/limits.h \
   /opt/sparc/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/limits.h \
-  /opt/opdk/leon-wsn/includes/ff.h /opt/opdk/leon-wsn/includes/integer.h \
-  /opt/opdk/leon-wsn/includes/ffconf.h \
-  /opt/opdk/leon-wsn/includes/diskio.h
-ff.o: ff.c /opt/opdk/leon-wsn/includes/ff.h \
-  /opt/opdk/leon-wsn/includes/integer.h \
-  /opt/opdk/leon-wsn/includes/ffconf.h \
-  /opt/opdk/leon-wsn/includes/diskio.h
-sccb.o: sccb.c /opt/opdk/leon-wsn/includes/sccb.h \
-  /opt/opdk/leon-wsn/includes/gpio.h /opt/opdk/leon-wsn/includes/types.h
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ff.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/integer.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ffconf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/diskio.h
+ff.o: ff.c /opt/git-hub/leon-wsn/leon-wsn/includes/ff.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/integer.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ffconf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/diskio.h
+sccb.o: sccb.c /opt/git-hub/leon-wsn/leon-wsn/includes/sccb.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h

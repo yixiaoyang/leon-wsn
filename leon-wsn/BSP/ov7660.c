@@ -8,7 +8,8 @@
 #include "diskio.h"
 
 // OV7660 寄存器配置参数
-const int8u_t reg_conf1[][2] =
+// 2012-2-18测试编号1
+const int8u_t reg_conf[][2] =
 {
 	{ 0x00 , 0x50 },//COM1
 	{ 0x01 , 0x80 },//COM1
@@ -44,8 +45,8 @@ const int8u_t reg_conf1[][2] =
 	{0x71, 0x80}//0x85测试
 };
 
-//王广福的
-const int8u_t reg_conf[][2]={
+//2012-2-18测试编号2,王广福的
+const int8u_t reg_conf1[][2]={
 	  	{0x3a, 0x04},
 		{0x40, 0x10},
 		{0x12, 0x14},

@@ -16,6 +16,9 @@
                       (   )   ) /
                        \ (   (_/
                         \_)     
+              
+cmd:
+grmon-eval -u -uart /dev/ttyUSB0 
                         
 +---------------+
 |	HISTORY		|

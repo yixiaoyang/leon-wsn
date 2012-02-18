@@ -1,8 +1,9 @@
-netif.o: netif.c /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/rf.h /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/uz2400d.h \
-  /opt/opdk/leon-wsn/includes/lemon.h \
-  /opt/opdk/leon-wsn/includes/ieee802_15_4.h \
+netif.o: netif.c /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/rf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uz2400d.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/lemon.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ieee802_15_4.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -26,7 +27,8 @@ netif.o: netif.c /opt/opdk/leon-wsn/includes/types.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/libc/string/bsdstring.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/limits.h \
   /opt/sparc/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/limits.h
-translate.o: translate.c /opt/opdk/leon-wsn/includes/includes.h \
+translate.o: translate.c \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/includes.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stdio.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/isoinfra.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/stddef.h \
@@ -83,15 +85,19 @@ translate.o: translate.c /opt/opdk/leon-wsn/includes/includes.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/hal/hal_amba.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/hal/hal_clock.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/cyg/memalloc/kapidata.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/spi.h \
-  /opt/opdk/leon-wsn/includes/fpga.h /opt/opdk/leon-wsn/includes/lemon.h \
-  /opt/opdk/leon-wsn/includes/netif.h /opt/opdk/leon-wsn/includes/gpio.h \
-  /opt/opdk/leon-wsn/includes/rf.h \
-  /opt/opdk/leon-wsn/includes/translate.h \
-  /opt/opdk/leon-wsn/includes/adpcm.h \
-  /opt/opdk/leon-wsn/includes/application.h \
-  /opt/opdk/leon-wsn/includes/data.h /opt/opdk/leon-wsn/includes/tools.h \
-  /opt/opdk/leon-wsn/includes/ieee802_15_4.h \
-  /opt/opdk/leon-wsn/includes/uz2400d.h \
-  /opt/opdk/leon-wsn/includes/VS1003x.h \
-  /opt/opdk/leon-wsn/includes/uart.h
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/lemon.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/netif.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/rf.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/translate.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/adpcm.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/application.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/data.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/tools.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/ieee802_15_4.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uz2400d.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/VS1003x.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/uart.h

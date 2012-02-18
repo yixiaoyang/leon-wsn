@@ -1,15 +1,19 @@
-spi.o: spi.c /opt/opdk/leon-wsn/includes/fpga.h \
-  /opt/opdk/leon-wsn/includes/spi.h /opt/opdk/leon-wsn/includes/fpga.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/gpio.h
-gpio.o: gpio.c /opt/opdk/leon-wsn/includes/types.h \
-  /opt/opdk/leon-wsn/includes/fpga.h /opt/opdk/leon-wsn/includes/gpio.h \
-  /opt/opdk/leon-wsn/includes/types.h
-apbuart.o: apbuart.c /opt/opdk/leon-wsn/includes/uart.h \
-  /opt/opdk/leon-wsn/includes/types.h /opt/opdk/leon-wsn/includes/fpga.h \
-  /opt/opdk/leon-wsn/includes/led.h
-tools.o: tools.c /opt/opdk/leon-wsn/includes/tools.h \
-  /opt/opdk/leon-wsn/includes/types.h
+spi.o: spi.c /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/spi.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h
+gpio.o: gpio.c /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/gpio.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h
+apbuart.o: apbuart.c /opt/git-hub/leon-wsn/leon-wsn/includes/uart.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/fpga.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/led.h
+tools.o: tools.c /opt/git-hub/leon-wsn/leon-wsn/includes/tools.h \
+  /opt/git-hub/leon-wsn/leon-wsn/includes/types.h
 serial.o: serial.c \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/system.h \
   /opt/opdk/ecos-rep-1.0.9/leon3_install/include/pkgconf/kernel.h \
