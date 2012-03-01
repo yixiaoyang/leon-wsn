@@ -313,14 +313,10 @@ void RF_SET_MAC_ADDR(const int8u_t* eadr)
 void RF_CHIP_INITIALIZE(void)
 {
 	//int8u_t i=0;
-	printf("1\n");
 	uz2400d_sw(UZS_SOFTRST, 0x07);			/* Reset register */
-	printf("2\n");
 	do {
 		uz2400d_sw(UZS_GATECLK, 0x20);		/* Enable SPI synchronous */
-		printf(".");
 	} while((uz2400d_sr(UZS_GATECLK)&0x20)!=0x20);		/* Check status */
-	printf("3\n");
 
 	uz2400d_sw(UZS_PACON1, 0x08); //fine-tune TX timing
 	uz2400d_sw(UZS_FIFOEN, 0x94); //fine-tune TX timing
