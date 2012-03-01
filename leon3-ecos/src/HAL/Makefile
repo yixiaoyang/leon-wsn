@@ -1,6 +1,6 @@
 
 LIB	= hal.a
-COBJS	= spi.o gpio.o apbuart.o tools.o serial.o cyg_spi.o
+COBJS	= spi.o gpio.o apbuart.o tools.o serial.o
 
 
 all:	$(LIB)

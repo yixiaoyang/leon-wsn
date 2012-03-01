@@ -1,7 +1,9 @@
 # Usage:   make INSTALL_DIR=/path/to/ecos/install
 
 #INSTALL_DIR=/opt/opdk/ecos-rep-1.0.9/ecos2_install
-INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/ecos_install
+#INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/ecos_install
+INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/spi_test_install
+#INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/leon3_ecos_install
 # Cross compilers
 SPARC_PREFIX=sparc-elf-
 CC=$(SPARC_PREFIX)gcc

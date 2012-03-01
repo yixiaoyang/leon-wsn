@@ -23,7 +23,7 @@
 #include <string.h>
 
 /*ecos lib*/
-#include "cyg/kernel/kapi.h"
+#include <cyg/kernel/kapi.h>
 
 /*user's header*/
 #include "types.h"

@@ -1,5 +1,5 @@
 
-                         \\\|///
+                        \\\|///
                        \\  - -  //
                         (  @ @  )
 +---------------------oOOo-(_)-oOOo-------------------------+
@@ -35,8 +35,11 @@ grmon-eval -u -uart /dev/ttyUSB0
 2011-11-15
 	--opdk update to version 2.0
 	
-2011-2-25
+2012-2-25
 	--port project to eclipse-ide
+
+2012-3-1
+	--complete ecos spi driver
 
 +---------------+
 |	IO PINS		|

@@ -68,12 +68,15 @@ void system_init(void) {
 	led_off(LEDG1);
 
 	/*spi init for RF*/
+	printf("spi init begin ..\n");
 	spi_init();
+	printf("spi init end...\n");
 
 	/*RF init*/
 	RF_CHIP_INITIALIZE();
-
-	//netconfig();
+	printf("RF_CHIP_INITIALIZE over..\n");
+	netconfig();
+	printf("netconfig over..\n");
 
 	/*big or little endien check*/
 	testing();
@@ -119,27 +122,27 @@ void thread_ctrl(cyg_addrword_t data) {
 	//serial test
 	//dprintf("serial test begin.\n");
 	//serial_test();
-
-	OV7660_init();
-	OV7660_work();
-	while (1) {
+	
+	//OV7660_init();
+	//OV7660_work();
+	//while (1) {
 			/*do your own work here*/
-			dprintf("uart0 test ok.\n");
-			led_on(LEDG0);
-			cyg_thread_delay(50);
-			led_off(LEDG0);
-			cyg_thread_delay(50);
+			//dprintf("uart0 test ok.\n");
+			//led_on(LEDG0);
+			//cyg_thread_delay(50);
+			//led_off(LEDG0);
+			//cyg_thread_delay(50);
 			/*do your own work here*/
-	}
+	//}
 	//fs_test();
-	/*OV7660_init();
-	OV7660_work();
+	//OV7660_init();
+	//OV7660_work();
 	while(1){
 		ov7070_pin_test();
 		cyg_thread_delay(400);
-	}*/
+	}
 
-	//dprintf("test end.\n");
+	dprintf("test end.\n");
 }
 
 

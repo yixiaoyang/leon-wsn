@@ -18,6 +18,7 @@
 <configuration artifactExtension="" artifactName="leon3-ecos" buildArtefactType="org.eclipse.cdt.build.core.buildArtefactType.exe" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,org.eclipse.cdt.build.core.buildArtefactType=org.eclipse.cdt.build.core.buildArtefactType.exe" cleanCommand="rm -rf" description="" id="cdt.managedbuild.config.ecos.exe.debug.338410780" name="Debug" parent="cdt.managedbuild.config.ecos.exe.debug" postannouncebuildStep="" postbuildStep="" preannouncebuildStep="" prebuildStep="">
 <folderInfo id="cdt.managedbuild.config.ecos.exe.debug.338410780." name="/" resourcePath="">
 <toolChain id="cdt.managedbuild.toolchain.ecos.exe.debug.1440563076" name="SPARC eCos" superClass="cdt.managedbuild.toolchain.ecos.exe.debug">
+<option id="ecos.option.installdir.1807745516" name="eCos install directory" superClass="ecos.option.installdir" value="/opt/cvs/ecos/ecos-3.0/ecos_install/include" valueType="string"/>
 <targetPlatform id="cdt.managedbuild.target.ecos.platform.exe.debug.2074986966" name="Debug Platform" superClass="cdt.managedbuild.target.ecos.platform.exe.debug"/>
 <builder buildPath="${workspace_loc:/leon3-ecos/Debug}" id="cdt.managedbuild.target.ecos.builder.exe.debug.928899317" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="eCos Make" superClass="cdt.managedbuild.target.ecos.builder.exe.debug"/>
 <tool id="cdt.managedbuild.tool.ecos.cpp.compiler.exe.debug.919035280" name="SPARC eCos C++ Compiler" superClass="cdt.managedbuild.tool.ecos.cpp.compiler.exe.debug">
@@ -28,8 +29,8 @@
 <option defaultValue="bcc.c.optimization.level.none" id="ecos.c.compiler.exe.debug.option.optimization.level.544558461" name="Optimization Level" superClass="ecos.c.compiler.exe.debug.option.optimization.level" valueType="enumerated"/>
 <option id="ecos.c.compiler.exe.debug.option.debugging.level.1032306365" name="Debug Level" superClass="ecos.c.compiler.exe.debug.option.debugging.level" value="bcc.c.debugging.level.max" valueType="enumerated"/>
 <option id="bcc.c.compiler.option.include.paths.2035537373" name="Include paths (-I)" superClass="bcc.c.compiler.option.include.paths" valueType="includePath">
-<listOptionValue builtIn="false" value="&quot;${workspace_loc:/leon3-ecos/src/includes}&quot;"/>
 <listOptionValue builtIn="false" value="/opt/cvs/ecos/ecos-3.0/ecos_install/include"/>
+<listOptionValue builtIn="false" value="&quot;${workspace_loc:/leon3-ecos/src/includes}&quot;"/>
 </option>
 <option id="bcc.c.compiler.option.preprocessor.nostdinc.1660199684" name="Do not search system directories (-nostdinc)" superClass="bcc.c.compiler.option.preprocessor.nostdinc"/>
 <option id="bcc.c.compiler.option.preprocessor.preprocess.694727279" name="Preprocess only (-E)" superClass="bcc.c.compiler.option.preprocessor.preprocess"/>
@@ -91,9 +92,7 @@
 <option id="bcc.c.compiler.option.preprocessor.preprocess.718883521" name="Preprocess only (-E)" superClass="bcc.c.compiler.option.preprocessor.preprocess"/>
 <option id="bcc.c.compiler.option.preprocessor.def.symbols.2038809027" name="Defined symbols (-D)" superClass="bcc.c.compiler.option.preprocessor.def.symbols"/>
 <option id="bcc.c.compiler.option.preprocessor.undef.symbol.1804247858" name="Undefined symbols (-U)" superClass="bcc.c.compiler.option.preprocessor.undef.symbol"/>
-<option id="bcc.c.compiler.option.include.paths.113036268" name="Include paths (-I)" superClass="bcc.c.compiler.option.include.paths" valueType="includePath">
-<listOptionValue builtIn="false" value="/opt/cvs/ecos/ecos-3.0/ecos_install/include"/>
-</option>
+<option id="bcc.c.compiler.option.include.paths.113036268" name="Include paths (-I)" superClass="bcc.c.compiler.option.include.paths"/>
 <option id="bcc.c.compiler.option.optimization.flags.562058018" name="Other optimization flags" superClass="bcc.c.compiler.option.optimization.flags"/>
 <option id="bcc.c.compiler.option.debugging.other.120110181" name="Other debugging flags" superClass="bcc.c.compiler.option.debugging.other"/>
 <option id="bcc.c.compiler.option.debugging.gprof.366584222" name="Generate gprof information (-pg)" superClass="bcc.c.compiler.option.debugging.gprof"/>

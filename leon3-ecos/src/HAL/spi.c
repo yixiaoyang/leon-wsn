@@ -2,113 +2,78 @@
  * spi.c
  *
  *  Created on: 2011-2-22
- *      Author: hgdytz
+ *      Author: LiangShuang
  */
 #include "fpga.h"
 #include "spi.h"
 #include "types.h"
 #include "gpio.h"
 
-/*
-int8u_t reverse8(int8u_t data)
-{
-	int8u_t rdata = 0x00, i=0;
-	for(;i<8;i++) {
-		rdata |=( (data << i & 0x80) >> (7-i) );
-	}
-	return rdata;
+/* 定义 SPI 线程的句柄*/
+static cyg_io_handle_t hDrvSPI;
+static cyg_uint32 _spi_blen = 1;
+static cyg_uint8 _spi_buf[2] = {0x0,0x0};
 
-}
-*/
+/* Reverse data*/
+#define REV	1		
 
-
-#define REV	1		/* Reverse data*/
 /******************************************************************
  * Initialize the SPI Controller
  *
  *****************************************************************/
-void spi_init(void) {
-	REG32(SPI_BASE+SPI_CAP) = 0x01018002;
-	/* Configure the capability register */
-				/* SPI_CAP_FDEPTH = 0x80 => Support FIFO size = 128 */
-				/* SPI_CAP_SSEN = 1 */
-				/* SPI_CAP_MAXWLEN = 0x0 => Support 32-bit length */
-				/* SPI_CAP_SSSZ = 0x01 */
-#if REV
-	REG32(SPI_BASE+SPI_MOD) |= 0x06740000;
-	/* Configure the mode register */
-									/* SPI_MOD_FACT = 0*/
-									/* SPI_MOD_PM = 4 */
-									/* SPI_MOD_LEN = 7 */
-									/* SPI_MOD_EN = 0 */
-			 	 	 	 	 	 	/* SPI_MOD_MS = 1 */
-									/* SPI_MOD_REV = 0 */
-									/* SPI_MOD_DIV16 = 0 */
-									/* SPI_MOD_CPHA = 0 */
-									/* SPI_MOD_CPOL = 0 */
-									/* SPI_MOD_REV = 1 */ /* MSB transmitted first */
-	// REG32(SPI_BASE+SPI_MOD) |= SPI_MOD_CPOL;
-	// REG32(SPI_BASE+SPI_MOD) |= SPI_MOD_CPHA;
-#else //SPI_MOD_REV = 0, LSB transmitted first
-	REG32(SPI_BASE+SPI_MOD) |= 0x02740000;
-#endif // REV
-	REG32(SPI_BASE+SPI_MSK) = 0x0;	/* Disable all interrupts */
-	REG32(SPI_BASE+SPI_MOD) |= SPI_MOD_EN;		/* Activate Core */
-
+int8u_t spi_init(void) {
+    if (ENOERR != cyg_io_lookup("/dev/spi", &hDrvSPI))
+    {
+        CYG_TEST_FAIL_FINISH("Error opening /dev/spi");
+        return -1;
+    }
+    
+    printf("Open /dev/spi OK\n");
+    return 1;
 }
+
 /********************************************************************
  * SPI TX and RX
  *
  *******************************************************************/
-int8u_t spi_xmit8(int8u_t val) {
-	int32u_t reg32;
-  /* Wait for room */
-	while(!(REG32(SPI_BASE+SPI_EVE)&SPI_EVE_NF));
-#if REV
-	REG32(SPI_BASE+SPI_TX) = val<<24&0xFF000000;
-#else
-	REG32(SPI_BASE+SPI_TX) = val;
-#endif // REV
-	//while(!(REG32(SPI_BASE+SPI_EVE)&SPI_EVE_NE));		/* Wait for transmitting over */
-	//while(!((REG32(SPI_BASE+SPI_EVE)&SPI_EVE_LT)));
-	while((REG32(SPI_BASE+SPI_EVE)&SPI_EVE_TIP));
-	reg32 = REG32(SPI_BASE+SPI_RX);
-	//printf("1st: 0x%x\n",reg32);
-#if REV
-	return (int8u_t)((reg32>>16)&0xFF);
-#else
-	return (int8u_t)((reg32>>8)&0xFF);
-#endif // REV
+inline int8u_t spi_wbyte(int8u_t val) {
+	_spi_blen = 1;
+	_spi_buf[1] = val;
+	if(ENOERR != cyg_io_write(hDrvSPI, _spi_buf+1, &_spi_blen)){
+		CYG_TEST_FINISH("Error write /dev/spi");
+	}
 }
-int16u_t spi_xmit16(int16u_t val)
+
+inline int8u_t spi_rbyte(int8u_t val){
+	_spi_blen = 1;
+	 if(ENOERR != cyg_io_read(hDrvSPI, (cyg_uint8*)(&val), &_spi_blen)){
+	 	CYG_TEST_FINISH("Error Read /dev/spi");
+     }
+     return val;
+}
+
+inline int8u_t spi_wbuf(int8u_t* buf, int32u_t len)
 {
-	while(!(REG32(SPI_BASE+SPI_EVE)&SPI_EVE_NF));
-	#if REV
-		REG32(SPI_BASE+SPI_TX) = val<<16&0xFFFF0000;
-	#else
-		REG32(SPI_BASE+SPI_TX) = val;
-	#endif // REV
-	while((REG32(SPI_BASE+SPI_EVE)&SPI_EVE_TIP));
-	int32u_t reg32 = REG32(SPI_BASE+SPI_RX);
-	//printf("back32: 0x%8x\n",reg32);
-	#if REV
-		return (int16u_t)((reg32>>16)&0xFFFF);
-	#else
-		return (int16u_t)(reg32&0xFFFF);
-	#endif // REV
+	if(ENOERR != cyg_io_write(hDrvSPI, (cyg_uint8*)(buf), (cyg_uint32*)(&len) )){
+		CYG_TEST_FINISH("Error write /dev/spi");
+		return -1;
+	}
+	
+	return 1;
 }
+
 /*******************************************************************
  * Reconfigure SPI Mode Register
  *
  ******************************************************************/
-
 int8s_t spi_reconfig(int32u_t mask, int32u_t val)
 {
+	/*
 	int32u_t mod;
 	if(REG32(SPI_BASE+SPI_EVE)&SPI_EVE_TIP) {
 		return -1;
 	}
-	/* Disable the SPI core */
+	// Disable the SPI core 
 	REG32(SPI_BASE+SPI_MOD) &= (~SPI_MOD_EN);
 
 	mod = REG32(SPI_BASE+SPI_MOD);
@@ -116,6 +81,7 @@ int8s_t spi_reconfig(int32u_t mask, int32u_t val)
 	REG32(SPI_BASE+SPI_MOD) = mod;
 
 	REG32(SPI_BASE+SPI_MOD) |= SPI_MOD_EN;
+	*/
 	return 0;
 }
 

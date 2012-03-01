@@ -1,5 +1,5 @@
-#include<data.h>
-#include<types.h>
+#include "data.h"
+#include <types.h>
 
 unsigned char musicdatafile[ FILELEN*2];
 const short music_data[FILELEN] ={/*18770,17990,10084,2,16727,17750,28006,8308,16,0,1,1,11025,0,22050,0,2,16,24932,24948,10048,2,0,0,0,1,-2,2,-2,2,-1,0,
