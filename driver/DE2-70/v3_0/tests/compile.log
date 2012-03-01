@@ -1,0 +1,52 @@
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:9:61: cyg/hal/SPCE3200_Constant.h: No such file or directory
+
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:18:81: cyg/io/spce3200_spi.h: No such file or directory
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:29: warning: initialization from incompatible pointer type
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:29: warning: initialization from incompatible pointer type
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c: In function `spi_INTService':
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:51: error: `ISR_DATA' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:51: error: (Each undeclared identifier is reported only once
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:51: error: for each function it appears in.)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:56: error: `TxFlag' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:58: error: `P_SPI_TX_STATUS' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:58: error: `C_SPI_TX_FLAG' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:60: error: `C_SPI_TX_INTEN' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:61: error: `P_SPI_RX_STATUS' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:61: error: `C_SPI_RX_INTEN' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:63: error: `_TxData_Num' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:65: error: `P_SPI_TXRX_STATUS' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:65: error: `C_SPI_TXFIFO_NOTFULL' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:67: error: `_Tx_buffer' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:67: error: `_TxData_get' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:68: error: `P_SPI_TX_DATA' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:72: error: `C_SPI_RXFIFO_NOTEMPTY' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:73: error: `P_SPI_RX_DATA' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:75: error: `MAX_EVENTS' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:80: error: `RxFlag' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:82: error: `C_SPI_RX_FLAG' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:85: error: `_RxData_Num' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:92: error: `_Rx_buffer' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:92: error: `_RxData_put' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c: In function `iob_set_config':
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:131: error: `CYGNUM_DEVS_SPI_SPCE3200_MASTER_CLOCK' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:135: error: `P_SPI_MODE_CTRL' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:141: error: `CYGNUM_DEVS_SPI_SPCE3200_SPH' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:151: error: `CYGNUM_DEVS_SPI_SPCE3200_SPO' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c: At top level:
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:166: error: conflicting types for 'spi_get_config'
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:25: error: previous declaration of 'spi_get_config' was here
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:166: error: conflicting types for 'spi_get_config'
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:25: error: previous declaration of 'spi_get_config' was here
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c: In function `iob_lookup':
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:182: error: `_SPIDrv_is_open' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:186: error: `ISR_DATA' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:188: error: `intr_handle' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:188: error: `intr' undeclared (first use in this function)
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c: At top level:
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:24: warning: 'spi_set_config' used but never defined
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:25: warning: 'spi_get_config' used but never defined
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:27: warning: 'spi_lookup' used but never defined
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:120: warning: 'iob_set_config' defined but not used
+/opt/cvs/ecos/ecos-3.0/packages/devs/spi/leon/DE2-70/v3_0/src/spi_spce3200.c:178: warning: 'iob_lookup' defined but not used
+make[1]: *** [src/spi_spce3200.o.d] 错误 1
+make: *** [build] 错误 2

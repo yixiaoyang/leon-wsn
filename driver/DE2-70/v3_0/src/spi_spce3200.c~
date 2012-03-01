@@ -1,0 +1,121 @@
+//-----------------------------------------包含相关头文件----------------------------//
+#include <pkgconf/hal.h>		// hal 的宏头文件,由系统自动生成
+#include <pkgconf/devs_spi_spce3200.h>	// spi 驱动 cdl 文件宏头文件,由系统自动生成
+#include <cyg/infra/cyg_type.h>	// 定义类型
+#include <cyg/hal/hal_intr.h>	// 定义中断相关宏
+
+#include <cyg/hal/drv_api.h>	// 驱动程序头文件
+//#include <cyg/hal/SPCE3200_Register.h>	// 定义 SPCE3200 硬件寄存器
+//#include <cyg/hal/SPCE3200_Constant.h>	// 定义 SPCE3200 常量
+// 定义错误常量,如 ENOERR
+#include <cyg/error/codes.h>
+#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1
+#include <cyg/infra/testcase.h>	// 测试宏定义,如 CYG_TEST_CHECK
+#include <cyg/infra/diag.h>		// diag 函数声明
+#include <stdio.h>				//调试函数如 printf 等声明
+#endif
+#include <cyg/io/devtab.h>		// 设备 I/O 入口表定义及声明
+#include <cyg/io/spi_spce3200.h>	// 定义 SPCE3200 的 SPI 模块相关常量,这里含 key
+
+//-----------------------------------------------------------------------------------//
+// Functions in this module
+static Cyg_ErrNo spi_write (cyg_io_handle_t handle, void *buffer, cyg_uint32 * len);
+static Cyg_ErrNo spi_read (cyg_io_handle_t handle, void *buffer, cyg_uint32 * len);
+static Cyg_ErrNo spi_set_config (cyg_io_handle_t handle, cyg_uint32 key, const void *buffer, cyg_uint32 * len);
+static Cyg_ErrNo spi_get_config (cyg_io_handle_t handle, cyg_uint32 key, const void *buffer, cyg_uint32 * len);
+static bool spi_init (struct cyg_devtab_entry *tab);
+static Cyg_ErrNo spi_lookup (struct cyg_devtab_entry **tab, struct cyg_devtab_entry *st, const char *name);
+
+/*xiaoyang add*/
+static cyg_bool _SPIDrv_is_open;
+static cyg_uint8 TxFlag,RxFlag;
+
+CHAR_DEVIO_TABLE (
+	spce3200_spi_handlers,	// SPI 设备 I/O 函数表句柄
+	spi_write,					// SPI 设备写函数
+	spi_read,					// SPI 设备读函数
+	NULL,						//
+	spi_get_config,				// SPI 读设备设置状态函数
+	spi_set_config				// SPI 设备设置函数
+	);
+
+CHAR_DEVTAB_ENTRY (
+	spce3200_spi_device,	// SPI 设备表入口句柄
+	CYGDAT_DEVS_SPI_SPCE3200_NAME,	// 设备名,在 cdl 文件中进行宏定义
+	NULL,						//
+	&spce3200_spi_handlers,		// SPI 设备 I/O 函数表句柄指针
+	spi_init,					// SPI 初始化函数
+	spi_lookup,					// SPI 设备查找函数
+	NULL);
+
+static cyg_uint32 spi_INTService (cyg_uint32 vector, CYG_ADDRWORD data)
+{
+	cyg_uint8 tempdata;
+#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1	// 如果是调试模式
+	//CYG_TEST_CHECK (ISR_DATA == data, "Bad data passed to ISR");// 检测安装数据是否成功
+	CYG_TEST_CHECK (43 == vector, "Bad vector passed to ISR");// 检测是否发生了 IRQ43 中断
+	printf ("Debug - spi Int Services\n");
+#endif
+	HAL_INTERRUPT_ACKNOWLEDGE (vector);	// 响应 IRQ43 中断
+	if (TxFlag == 1)			// 如果正在发送数据
+	{
+		if ( 0)// 如果是发送中断
+		{
+			
+		}
+	}
+	// 如果正在接收数据
+	if (RxFlag == 1)
+	{
+		if (0)// 如果是接收中断
+		{
+			
+		}
+	}
+// ISR 中断服务程序返回
+	return CYG_ISR_HANDLED;
+}
+
+static Cyg_ErrNo spi_write (cyg_io_handle_t handle, void *buffer, cyg_uint32 * len)
+{
+	#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1	// 如果是调试模式
+	printf ("Debug - spi write data\n");
+	#endif
+}
+
+static Cyg_ErrNo spi_read (cyg_io_handle_t handle, void *buffer, cyg_uint32 * len)
+{
+	#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1	// 如果是调试模式
+	printf ("Debug - spi read data\n");
+	#endif
+}
+
+static Cyg_ErrNo iob_set_config (cyg_io_handle_t handle, cyg_uint32 key, const void *buffer, cyg_uint32 * len)
+{
+	cyg_uint32 *bp = (cyg_uint32 *) buffer;
+#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1
+	printf ("Debug - spi Set Config\n");
+#endif
+	
+	return EINVAL;
+}
+
+static Cyg_ErrNo spi_get_config (cyg_io_handle_t handle, cyg_uint32 key, const void *buffer, cyg_uint32 * len)
+{
+	return EINVAL;
+}
+
+static bool spi_init (struct cyg_devtab_entry *tab)
+{
+	#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1	// 如果是调试模式
+	printf ("Debug - spi init\n");
+	#endif
+}
+
+static Cyg_ErrNo spi_lookup (struct cyg_devtab_entry **tab, struct cyg_devtab_entry *st, const char *name)
+{
+	#if CYGNUM_DEVS_SPI_SPCE3200_DEBUG_MODE == 1
+		printf ("Debug - spi Lookup\n");
+	#endif
+	return ENOERR;
+}

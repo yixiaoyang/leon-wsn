@@ -1,0 +1,5 @@
+2009-02-10  xiaoyang.yi  <hityixiaoyang@gmail.com>
+	* src/spi_leon3.c  (cyg_spi_cortexm_stm32_init): mark as prioritized constructor and rename.
+	* cdl/spi_stm32.cdl: stop building spi_stm32_init.cxx
+
+

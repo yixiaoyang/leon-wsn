@@ -1,0 +1,82 @@
+##=============================================================================
+##
+##      spi_leon3.cdl
+##
+##      LEON3-WSN SPI driver configuration options.
+## 
+##=============================================================================
+#######DESCRIPTIONBEGIN####
+##
+## Author(s):   xiaoyang.yi
+## Date:        2012-2-27
+## Purpose:     Configure leon3-wsn SPI driver.
+##
+######DESCRIPTIONEND####
+##=============================================================================
+
+cdl_package CYGPKG_DEVS_SPI_LEON3 {
+	display "SPI driver for Leon3"
+	include_dir cyg/io
+	requires CYGPKG_IO
+	compile -library=libextras.a spi_leon3.c
+	description "SPI driver for Leon3"
+	
+	cdl_component CYGPKG_DEVS_SPI_LEON3_OPTIONS {
+		display "Compile Options"
+		flavor none
+		no_define
+		
+		cdl_option CYGPKG_DEVS_SPI_LEON3_CFLAGS {
+			display "Additional compiler flags"
+			flavor data
+			no_define
+			default_value { "" }
+			description "
+				This option modifies the set of compiler flags for
+				building the spi driver package. These flags
+				are used in addition to the set of global flags."
+		}
+
+		cdl_option CYGDAT_DEVS_SPI_LEON3_NAME {
+			display "Device name for the spi driver"
+			flavor data
+			default_value {"\"/dev/spi\""}
+			description " This option specifies the name of the spi device"
+		}
+
+		cdl_option CYGNUM_DEVS_SPI_LEON3_DEBUG_MODE {
+			display "Debug Message"
+			default_value	0
+			description "
+				This option will enable the debug message outputing if set to 1,
+				will disable the outputing if set to 0."
+		}
+	}
+	
+	cdl_component CYGHWR_DEVS_SPI_LEON3_OPTIONS {
+		display "Connection Options"
+		flavor none
+		no_define
+		
+		cdl_option CYGNUM_DEVS_SPI_LEON3_EVENT_BUFFER_SIZE {
+			display "Number of events the driver can buffer"
+			flavor data
+			legal_values 1 to 512
+			default_value 32
+			description "
+				This option defines the size of the keypad device internal
+				buffer. The cyg_io_read() function will return as many of these
+				as there is space for in the buffer passed."
+		}
+
+		cdl_option CYGNUM_DEVS_SPI_LEON3_MODE_SELECT {
+			display "SPI Master/Slave Mode Select"
+			flavor data
+			legal_values { "MASTER" "SLAVE" }
+			default_value {"MASTER"}
+			description "
+				This option select Master or Slave mode."
+		}
+	}
+}
+# EOF spi_leon3.cdl
