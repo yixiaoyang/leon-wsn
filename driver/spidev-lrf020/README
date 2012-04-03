@@ -1,0 +1,16 @@
+LRF020 DRIVER FOR LINUX
+=======================
+
+using  includes/linux/spi/spidev.h,driver/spi/spidev.c
+
+2012-3-23 xiaoyang@HIT
+
+Kernel Version:	linux2.6.30
+Board Info:		tq2440 arm9(S3C2440)
+				http://www.armbbs.net/forum.php
+LRF020:			2.4GHZ RF module
+				http://www.lustech.com.cn/index.php?case=archive&act=show&aid=24
+
+
+log:
+	2012-3-4 passed test,set and read MAC successfully!

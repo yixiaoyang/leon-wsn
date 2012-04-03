@@ -1,0 +1,1 @@
+cmd_/opt/git-hub/linux_driver/lrf020-linux/spidev/spidev.ko := arm-linux-ld -EL -r   --build-id -o /opt/git-hub/linux_driver/lrf020-linux/spidev/spidev.ko /opt/git-hub/linux_driver/lrf020-linux/spidev/spidev.o /opt/git-hub/linux_driver/lrf020-linux/spidev/spidev.mod.o

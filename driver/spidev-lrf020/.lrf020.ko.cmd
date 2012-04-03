@@ -1,0 +1,1 @@
+cmd_/opt/git-hub/leon3-wsn/driver/spidev-lrf020/lrf020.ko := arm-linux-ld -EL -r   --build-id -o /opt/git-hub/leon3-wsn/driver/spidev-lrf020/lrf020.ko /opt/git-hub/leon3-wsn/driver/spidev-lrf020/lrf020.o /opt/git-hub/leon3-wsn/driver/spidev-lrf020/lrf020.mod.o

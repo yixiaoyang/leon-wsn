@@ -1,0 +1,6 @@
+SPI MASK REGISTER
+
+not empty enable(NEE) interrupt 
+not full enable（NFE） interrupt
+
+
