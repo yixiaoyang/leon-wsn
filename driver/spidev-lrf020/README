@@ -10,7 +10,13 @@ Board Info:		tq2440 arm9(S3C2440)
 				http://www.armbbs.net/forum.php
 LRF020:			2.4GHZ RF module
 				http://www.lustech.com.cn/index.php?case=archive&act=show&aid=24
-
-
+				
 log:
 	2012-3-4 passed test,set and read MAC successfully!
+	
+Note:
+	(1)本工程基于天嵌提供linux2.6.30.4移植好的源码，驱动lrf020无线模块，采用spi0接口。
+	(2)本工程采用了spidev源码，并加以修改。spidev提供了一个稳定的spi driver demo框架，可将includes/linux/spi/spidev.h,driver/spi/spidev.c拷贝出来，自行修改编译。
+	(3)其他平台若要编写基于linux spi子系统模型内核驱动（并非GPIO模拟或者用户空间驱动之类的），在此提出一种比较好的方法。即使用spidev源码，加入自己的protocol而不用自行接触低层硬件寄存器，然后改写read/write方法供用户层调用。
+	(4)基于linux spi子系统模型内核驱动需要对内核有较为深入的了解，结合linux的spi文档和源码进行查读，是spi驱动编写之捷径。
+
