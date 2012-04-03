@@ -37,6 +37,7 @@ typedef struct frm_ctrl
 	U16 frm_ver:2;
 	U16 dstaddr_mode:2;
 	U16 reserved2:2;
+
 } frm_ctrl_t;
 
 typedef struct ieee15_4_mac_hdr {

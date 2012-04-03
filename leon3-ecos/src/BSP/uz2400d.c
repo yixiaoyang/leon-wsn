@@ -106,10 +106,10 @@ void uz2400d_lr_block(int16u_t laddr, int8u_t* buf, int16u_t size)
 	laddr = ((laddr<<5)&0x7FEF)|0x8000;	/* Set address and command */
 	spi_wbyte(((int8u_t*)&laddr)[0]);		/* High 8 bits */
 	spi_wbyte(((int8u_t*)&laddr)[1]);		/* Low 8 bits */
-	/*while(size--) {
+	while(size--) {
 		*buf++ = spi_rbyte(0x00);
-	}*/
-	spi_wbuf(buf, size);
+	}
+	//spi_wbuf(buf, size);
 	
 	SLV_DESELECT();
 }
