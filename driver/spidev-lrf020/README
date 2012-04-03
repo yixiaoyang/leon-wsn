@@ -10,9 +10,10 @@ Board Info:		tq2440 arm9(S3C2440)
 				http://www.armbbs.net/forum.php
 LRF020:			2.4GHZ RF module
 				http://www.lustech.com.cn/index.php?case=archive&act=show&aid=24
-				
+Source@Git:		https://github.com/yixiaoyang/leon-wsn/tree/master/driver/spidev-lrf020
+
 log:
-	2012-3-4 passed test,set and read MAC successfully!
+	2012-4-3 passed test,set and read MAC successfully!
 	
 Note:
 	(1)本工程基于天嵌提供linux2.6.30.4移植好的源码，驱动lrf020无线模块，采用spi0接口。
