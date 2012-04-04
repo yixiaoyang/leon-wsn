@@ -85,9 +85,10 @@ const char this_device_name[] = "LRF020";
 static LIST_HEAD(device_list);
 static DEFINE_MUTEX(device_list_lock);
 
-static unsigned bufsiz = 4096;
-module_param(bufsiz, uint, S_IRUGO);
-MODULE_PARM_DESC(bufsiz, "data bytes in biggest supported SPI message");
+static unsigned bufsiz =RF_BUF_SIZE;
+//static unsigned bufsiz = 4096;
+//module_param(bufsiz, uint, S_IRUGO);
+//MODULE_PARM_DESC(bufsiz, "data bytes in biggest supported SPI message");
 
 /*-------------------------------------------------------------------------*/
 
@@ -534,6 +535,12 @@ static int spidev_open(struct inode *inode, struct file *filp)
 	unlock_kernel();
 	
 	/*xiaoyang add*/
+	NSS0_SET();
+	NSS0_CLR();
+	NSS0_SET();
+	//s3c2410_gpio_setpin(S3C2410_GPG2,0);
+	//s3c2410_gpio_setpin(S3C2410_GPG2,1);
+	//s3c2410_gpio_setpin(S3C2410_GPG2,0);
 	printk("test begin!\n");
 	RF_TEST(spidev);
 	printk("test end!\n");

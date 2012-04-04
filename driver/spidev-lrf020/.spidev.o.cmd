@@ -347,6 +347,18 @@ deps_/opt/git-hub/leon3-wsn/driver/spidev-lrf020/spidev.o := \
     $(wildcard include/config/pm.h) \
   include/linux/smp_lock.h \
     $(wildcard include/config/lock/kernel.h) \
+  arch/arm/mach-s3c2410/include/mach/regs-gpio.h \
+    $(wildcard include/config/cpu/s3c2400.h) \
+  arch/arm/mach-s3c2410/include/mach/gpio-nrs.h \
+  arch/arm/mach-s3c2410/include/mach/hardware.h \
+    $(wildcard include/config/cpu/s3c2440.h) \
+    $(wildcard include/config/cpu/s3c2412.h) \
+    $(wildcard include/config/no/multiword/io.h) \
+  arch/arm/mach-s3c2410/include/mach/map.h \
+  arch/arm/plat-s3c/include/plat/map-base.h \
+  arch/arm/plat-s3c24xx/include/plat/map.h \
+    $(wildcard include/config/cpu/s3c2413.h) \
+    $(wildcard include/config/cpu/s3c2412/only.h) \
   include/linux/spi/spi.h \
     $(wildcard include/config/spi.h) \
   include/linux/spi/spidev.h \

@@ -14,6 +14,9 @@
 #include <linux/delay.h>
 #include <linux/types.h>
 
+#include <mach/regs-gpio.h>
+#include <mach/hardware.h>
+
 #define BIT_0		0x01
 #define BIT_1 	0x02
 #define BIT_2		0x04
@@ -72,6 +75,8 @@
 
 #define SLV_SELECT() udelay(1)
 #define SLV_DESELECT() udelay(1)
+#define NSS0_SET()	s3c2410_gpio_setpin(S3C2410_GPG2,1)
+#define NSS0_CLR()	s3c2410_gpio_setpin(S3C2410_GPG2,0)
 #define rf_delay udelay
 
 #endif

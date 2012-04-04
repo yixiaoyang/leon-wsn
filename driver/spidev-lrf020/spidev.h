@@ -35,6 +35,10 @@
 #include <linux/slab.h>
 #include <linux/smp_lock.h>
 
+/*for gpio add by xiaoyang*/
+#include <mach/regs-gpio.h>
+#include <mach/hardware.h>
+
 #include <linux/spi/spi.h>
 #include <linux/spi/spidev.h>
 

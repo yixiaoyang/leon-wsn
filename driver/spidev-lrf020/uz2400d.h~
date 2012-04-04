@@ -102,8 +102,8 @@
 
 /*r/w word interface*/
 ssize_t uz2400d_sw(struct spidev_data* spidev,u8 saddr, u8 value);
-ssize_t uz2400d_sw2(struct spidev_data* spidev,u8 saddr, u8 value);
-u8 uz2400d_sr2(struct spidev_data* spidev,u8 saddr);
+//ssize_t uz2400d_sw2(struct spidev_data* spidev,u8 saddr, u8 value);
+//u8 uz2400d_sr2(struct spidev_data* spidev,u8 saddr);
 u8 uz2400d_sr(struct spidev_data* spidev,u8 saddr);
 ssize_t uz2400d_lw(struct spidev_data* spidev,u16 laddr, u8 value);
 u8 uz2400d_lr(struct spidev_data* spidev,u16 laddr);

@@ -208,17 +208,17 @@ void RF_SET_MAC_ADDR(struct spidev_data* rf_dev,const u8* eadr)
  */
 void RF_CHIP_INITIALIZE(struct spidev_data* rf_dev)
 {
-	uz2400d_sw(rf_dev,UZS_SOFTRST, 0x07);			/* Reset register */
+	uz2400d_sw2(rf_dev,UZS_SOFTRST, 0x07);			/* Reset register */
 	printk("UZS_GATECLK:%02x,%02x(0x88)\n",
-		(uz2400d_sr(rf_dev,UZS_GATECLK)),
-		uz2400d_sr(rf_dev,UZS_FIFOEN));/*UZS_FIFOEN:0x88*/
+		(uz2400d_sr2(rf_dev,UZS_GATECLK)),
+		uz2400d_sr2(rf_dev,UZS_FIFOEN));/*UZS_FIFOEN:0x88*/
 	
 	do {
-		uz2400d_sw(rf_dev,UZS_GATECLK, 0x20);		/* Enable SPI synchronous */
+		uz2400d_sw2(rf_dev,UZS_GATECLK, 0x20);		/* Enable SPI synchronous */
 		printk("UZS_GATECLK:%02x,%02x(0x88)\n",
-				(uz2400d_sr(rf_dev,UZS_GATECLK)),
-				uz2400d_sr(rf_dev,UZS_FIFOEN));//UZS_FIFOEN:0x88
-	} while((uz2400d_sr(rf_dev,UZS_GATECLK)&0x20)!=0x20);		/* Check status */
+				(uz2400d_sr2(rf_dev,UZS_GATECLK)),
+				uz2400d_sr2(rf_dev,UZS_FIFOEN));//UZS_FIFOEN:0x88
+	} while((uz2400d_sr2(rf_dev,UZS_GATECLK)&0x20)!=0x20);		/* Check status */
 
 	uz2400d_sw(rf_dev,UZS_PACON1, 0x08); //fine-tune TX timing
 	uz2400d_sw(rf_dev,UZS_FIFOEN, 0x94); //fine-tune TX timing

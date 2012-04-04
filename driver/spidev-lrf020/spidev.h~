@@ -35,6 +35,10 @@
 #include <linux/slab.h>
 #include <linux/smp_lock.h>
 
+/*for gpio*/
+#include <mach/regs-gpio.h>
+#include <mach/hardware.h>
+
 #include <linux/spi/spi.h>
 #include <linux/spi/spidev.h>
 
@@ -141,6 +145,7 @@ struct spi_ioc_transfer {
 #define SPI_IOC_WR_MAX_SPEED_HZ		_IOW(SPI_IOC_MAGIC, 4, __u32)
 
 
+/*xiaoyang add*/
 #define RF_BUF_SIZE	4096
 /*device definition*/
 struct spidev_data {

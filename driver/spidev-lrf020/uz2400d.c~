@@ -34,7 +34,8 @@ ssize_t uz2400d_sw2(struct spidev_data* spidev,u8 saddr, u8 value)
 	ssize_t status = 0;
 	rf_tbuf[0] = ((saddr<<1&0x7E)|0x01);
 	rf_tbuf[1] = value;
-	spi_write(spidev->spi,&rf_tbuf[0],2);
+	spi_w8r8(spidev->spi,rf_tbuf[0]);
+	spi_w8r8(spidev->spi,rf_tbuf[1]);
 	return status;
 }
 
