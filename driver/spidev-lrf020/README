@@ -12,7 +12,10 @@ LRF020:			2.4GHZ RF module
 				http://www.lustech.com.cn/index.php?case=archive&act=show&aid=24
 Source@Git:		https://github.com/yixiaoyang/leon-wsn/tree/master/driver/spidev-lrf020
 
-log:
+Bugs:
+	(1)在linux设备上运行insmod lrf020.ko后，由于RF默认并没有开启spi同步模式，而linux的spi接口都是sync方式，所以需要在第一次加载模块时手动悬空NSS0(SPISEL)管脚，再接上去。以后便可以正常使用。还没找到解决办法。
+	
+Log:
 	2012-4-3 passed test,set and read MAC successfully!
 	
 Note:
