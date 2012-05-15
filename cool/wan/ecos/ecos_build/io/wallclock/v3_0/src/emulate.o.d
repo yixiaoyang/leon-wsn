@@ -1,0 +1,19 @@
+src/emulate.o.d:  \
+ /home/water/workspace/WSN-Audio/Software/fpga/ecos/ecos-3.0/packages/io/wallclock/v3_0/src/emulate.cxx \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/wallclock.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/kernel.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/system.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal_sparc.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal_sparc_leon3.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/infra.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/infra/cyg_type.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/stddef.h \
+  /opt/programs/XTOOLS/leon3/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/stddef.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/hal/basetype.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/kernel/ktypes.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/io/wallclock.hxx \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/kernel/clock.hxx \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/infra/cyg_ass.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/infra/clist.hxx \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/cyg/kernel/clock.inl

@@ -1,0 +1,138 @@
+yixiaoyang@yixiaoyang-desktop:~/桌面/tmn移植/tmn2.0-vs/mnt2.0-vs$ tsim-leon3
+
+ This TSIM evaluation version will expire July 1, 2011
+
+
+ TSIM/LEON3 SPARC simulator, version 2.0.18 (evaluation version)
+
+ Copyright (C) 2001, Gaisler Research - all rights reserved.
+ This software may only be used with a valid license.
+ For latest updates, go to http://www.gaisler.com/
+ Comments or bug-reports to tsim@gaisler.com
+
+serial port A on stdin/stdout
+allocated 4096 K RAM memory, in 1 bank(s)
+allocated 32 M SDRAM memory, in 1 bank
+allocated 2048 K ROM memory
+icache: 1 * 4 kbytes, 16 bytes/line (4 kbytes total)
+dcache: 1 * 4 kbytes, 16 bytes/line (4 kbytes total)
+tsim> load tmn
+section: .text, addr: 0x40000000, size 120320 bytes
+section: .data, addr: 0x4001d600, size 396308 bytes
+read 423 symbols
+tsim> go
+resuming at 0x40000000
+
+TMN (H.263) coder version 2.0, Copyright (C) 1995, 1996 Telenor R&D, Norway
+argc:9
+Encoding format: QCIF (176x144)
+Encoding frame rate  : 10.00
+Reference frame rate : 30.00
+Orig. seq. frame rate: 30.00
+
+Reading image no: 1
+Finished INTRA
+SNR_Y  : 33.73
+SNR_Cb : 37.05
+SNR_Cr : 37.49
+--------------
+# intra   : 99
+# inter   : 0
+# inter4v : 0
+--------------
+Coeff_Y: 13119
+Coeff_C: 3110
+Vectors: 0
+CBPY   : 305
+MCBPC  : 195
+MODB   : 0
+CBPB   : 0
+COD    : 0
+DQUANT : 0
+header : 55
+==============
+Total  : 16784
+
+Reading image no: 4
+Coding P frame 4... done
+Results for P-frame:
+SNR_Y  : 33.50
+SNR_Cb : 35.44
+SNR_Cr : 36.10
+--------------
+# intra   : 0
+# inter   : 81
+# inter4v : 0
+--------------
+Coeff_Y: 2012
+Coeff_C: 823
+Vectors: 353
+CBPY   : 214
+MCBPC  : 218
+MODB   : 0
+CBPB   : 0
+COD    : 99
+DQUANT : 0
+header : 57
+==============
+Total  : 3776
+
+Reading image no: 7
+Coding P frame 7... done
+Results for P-frame:
+SNR_Y  : 33.46
+SNR_Cb : 35.18
+SNR_Cr : 36.31
+--------------
+# intra   : 0
+# inter   : 90
+# inter4v : 0
+--------------
+Coeff_Y: 1739
+Coeff_C: 1109
+Vectors: 445
+CBPY   : 228
+MCBPC  : 286
+MODB   : 0
+CBPB   : 0
+COD    : 99
+DQUANT : 0
+header : 54
+==============
+Total  : 3960
+
+
+==== TOTAL ====
+for 2 images of grandma_qcif.yuv
+--------------
+SNR for 2 P-frames:
+SNR_Y  : 33.48
+SNR_Cb : 35.31
+SNR_Cr : 36.20
+--------------
+# intra   : 0
+# inter   : 85
+# inter4v : 0
+--------------
+Coeff_Y: 1875
+Coeff_C: 966
+Vectors: 399
+CBPY   : 221
+MCBPC  : 252
+MODB   : 0
+CBPB   : 0
+COD    : 99
+DQUANT : 0
+header : 55
+==============
+Total  : 3868
+
+Mean quantizer   : 10.00
+Encoded frames   :   3 (  2)
+Mean frame rate  : 10.00 Hz
+Obtained bit rate: 81.73 (38.68) kbit/sec
+============================================
+
+Program exited normally.
+tsim> 
+

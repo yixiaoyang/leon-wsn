@@ -1,9 +1,13 @@
-# Usage:   make INSTALL_DIR=/path/to/ecos/install
+#
+# Makefile for leon3_ecos_install project 
+#
+# log:
+# 	2012-5-6 create
+#
 
-#INSTALL_DIR=/opt/opdk/ecos-rep-1.0.9/ecos2_install
-#INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/ecos_install
+# Usage:   make INSTALL_DIR=/path/to/ecos/install
 INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/spi_test_install
-#INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/leon3_ecos_install
+
 # Cross compilers
 SPARC_PREFIX=sparc-elf-
 CC=$(SPARC_PREFIX)gcc
@@ -33,13 +37,11 @@ PROM_FLAG=-msoft-float -freq 50 -rmw -romwidth 8 -romws 3
 #TOPLDFLAGS = $(CFLAGS) -Wl,-static,-Ttext=0x40000000
 export CFLAGS LDFLAGS
 
-# Make objects
-#SUBDIRS = HAL misc BSP Stack # The order is important!
-SUBDIRS = Application Adpcm Stack BSP misc HAL
-# LIBS = HAL/hal.a  misc/misc.a  BSP/bsp.a Stack/stack.a 
+# The order is important!
+SUBDIRS = App Adpcm Stack Stack Tools Wireless Video Fat32 BSP Misc HAL
+LIBS = App/application.a Adpcm/adpcm.a Stack/stack.a Stack/stack.a Tools/tools.a Wireless/wireless.a Video/video.a Fat32/fat32.a  BSP/bsp.a Misc/misc.a HAL/hal.a 
 
-#*************************************** The order below is important!*********************
-LIBS = Application/application.a Adpcm/adpcm.a Stack/stack.a BSP/bsp.a HAL/hal.a 
+#others
 
 all: $(PRJNAME).elf $(PRJNAME).dis $(PRJNAME).srec
 	$(SILENT)@echo "End compiling~~~"
@@ -78,5 +80,5 @@ lemon-move: $(PRJNAME).srec $(PRJNAME).elf
 	@rm -f $(DESIGN_DIR)/$(PRJNAME).srec
 	@rm -f $(DESIGN_DIR)/$(PRJNAME).elf
 	cp $^ $(DESIGN_DIR)/ 
-	@echo "move file to design"s
+	@echo "move file to design"
 

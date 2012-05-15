@@ -2,7 +2,7 @@
  * gpio.c
  *
  *  Created on: 2011-11-10
- *  xiaoyang for OPDK2
+ *  xiaoyang for OPDK2,using GPIO aux
  */
 
 #include "types.h"
@@ -65,7 +65,6 @@ inline int8u_t gpio_read_group(int8u_t pbase)
 }
 
 /*end of file*/
-
 void gpio_test() {
 	//gpio_make_in(PORTA, 0xff);//make io[0-7] as pin
 	printf("read PORTA,PCLK,VSYNC,HREF:%4x,%4x,%4x,%4x\n",
@@ -73,7 +72,4 @@ void gpio_test() {
 			gpio_read(PORTB,1<<1),
 			gpio_read(PORTB,1<<6),
 			gpio_read(PORTB,1<<7));
-	//#define OV7660_PCLK		1<<1 	//PORTB[1]==>IO_B[9]
-	//#define OV7660_VSYNC		1<<6	//PORTB[6]==>IO_B[14]
-	//#define OV7660_HREF		1<<7	//PORTB[7]==>IO_B[15]
 }

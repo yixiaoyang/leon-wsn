@@ -26,17 +26,17 @@
 
 typedef struct frm_ctrl
 {
-	U16 reserved1:1;
-	U16 PAN_compress:1;
-	U16 ack_req:1;
-	U16 frm_pending:1;
-	U16 security_en:1;
-	U16 frm_type:3;
+	u16 reserved1:1;
+	u16 PAN_compress:1;
+	u16 ack_req:1;
+	u16 frm_pending:1;
+	u16 security_en:1;
+	u16 frm_type:3;
 
-	U16 srcaddr_mode:2;
-	U16 frm_ver:2;
-	U16 dstaddr_mode:2;
-	U16 reserved2:2;
+	u16 srcaddr_mode:2;
+	u16 frm_ver:2;
+	u16 dstaddr_mode:2;
+	u16 reserved2:2;
 } frm_ctrl_t;
 
 typedef struct ieee15_4_mac_hdr {

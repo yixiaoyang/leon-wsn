@@ -1,0 +1,33 @@
+#if 1
+        printf("Total frames     : %3d (%3d)\n",
+                total_frames_passed + first_frameskip,
+                total_frames_passed);
+#endif
+
+        printf("Encoded frames   : %3d (%3d)\n",
+                frames + 1,
+                frames);
+
+        mean_frame_rate = frames  / (float)total_frames_passed *
+                          ref_frame_rate / (float)orig_frameskip;
+
+        printf("Mean frame rate  : %.2f Hz\n", mean_frame_rate);
+
+        if (targetrate != 0)
+            printf("Target bit rate  : %.2f kbit/sec\n",
+                    targetrate/1000.0);
+
+        printf("Obtained bit rate: %.2f (%.2f) kbit/sec\n",
+                (total_bits->total + intra_bits->total) /
+                ((total_frames_passed + first_frameskip) /
+                 ref_frame_rate * orig_frameskip)/1000.0,
+                (total_bits->total / (float)frames) * mean_frame_rate/1000.0);
+
+        printf("============================================\n");
+
+    }
+#if 1
+    printf("Total number of bits: %d (%d)\n",
+            total_bits->total + intra_bits->total,
+            (total_bits->total + intra_bits->total) / 8);
+#endif

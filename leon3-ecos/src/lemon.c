@@ -2,16 +2,21 @@
 #include "ov7660.h"
 #include "led.h"
 
-//for FS
+/*for FS*/
 #include "sd.h"
 #include "FAT32.h"
 #include "ff.h"
 #include "diskio.h"
 
+#define DEV_MISC	0
+#define DEV_VIDEO	1
+#define DEV_ROUTER	0
+
 /*local parameters*/
-static cyg_handle_t threads_voice, threads_isr;
+static cyg_handle_t thread_handles[NTHREADS];
 static cyg_thread thread_s[NTHREADS];
-static char thread_stacks[NTHREADS][STACKSIZE];
+static char thread_stacks1[204800];
+static char thread_stacks0[STACKSIZE];
 
 /*global parameters*/
 cyg_mutex_t cliblock;
@@ -92,15 +97,15 @@ void system_init(void) {
  * Author: xiaoyang
  * Created: 2011-9-22
  * Parameters:
- * Description:ecos thread for collecting
+ * Description:ecos thread for controlling
  */
-void thread_collect(cyg_addrword_t data) {
+void thread_ctrl(cyg_addrword_t data) {
 	//gpio_make_out(PORTB, 0xc0);//make io[14-15] as pout
 	while (1) {
 		/*do your own work here*/
-		//led_on(LEDG1);
+		led_on(LEDG1);
 		cyg_thread_delay(50);
-		//led_off(LEDG1);
+		led_off(LEDG1);
 		cyg_thread_delay(50);
 		/*do your own work here*/
 	}
@@ -110,9 +115,9 @@ void thread_collect(cyg_addrword_t data) {
  * Author: xiaoyang
  * Created: 2011-9-22
  * Parameters:
- * Description:ecos thread for controlling
+ * Description:ecos thread for collecting
  */
-void thread_ctrl(cyg_addrword_t data) {
+void thread_collect(cyg_addrword_t data) {
 	// uart test
 	led_off(LEDG0);
 	//dprintf("test begin.\n");
@@ -135,10 +140,21 @@ void thread_ctrl(cyg_addrword_t data) {
 			/*do your own work here*/
 	//}
 	//fs_test();
-	//OV7660_init();
-	//OV7660_work();
+	OV7660_init();
+	OV7660_work();
 	while(1){
-		ov7070_pin_test();
+		ov7660_pin_test();
+		cyg_thread_delay(400);
+	}
+
+	dprintf("test end.\n");
+}
+
+void thread_misc(cyg_addrword_t data) {
+	// uart test
+	led_off(LEDG0);
+
+	while(1){
 		cyg_thread_delay(400);
 	}
 
@@ -153,25 +169,52 @@ void thread_ctrl(cyg_addrword_t data) {
  * Description:entry of program
  */
 int main(void) {
+	unsigned int i = 0;
 	/*configueration*/
-	dprintf("\nsystem init.\n");
 	system_init();
+
 	/*ecos work*/
-	dprintf("\nstart main:[ok]\n");
+	dprintf("\neCos start:[ok]\n");
 
+#if DEV_VIDEO 
 	/*init and setup working threads*/
-	cyg_thread_create(4, thread_collect, (cyg_addrword_t) 0, "isr_voice",
-			(void *) thread_stacks[0], STACKSIZE, &threads_isr, &thread_s[0]);
+	cyg_thread_create(
+		4,/*priority*/ 
+		thread_collect,/*entry*/ 
+		(cyg_addrword_t) 0,/*entry data*/
+		"thread_video",/*thread name*/
+		(void *) thread_stacks1,/*stack base*/ 
+		204800,/*stack size*/
+		&thread_handles[0], /*thread handle*/
+		&thread_s[0]);/*thread entity address*/
+#elif DEV_MISC
+	cyg_thread_create(
+		4,/*priority*/ 
+		thread_misc,/*entry*/ 
+		(cyg_addrword_t) 0,/*entry data*/
+		"isr_voice",/*thread name*/
+		(void *) thread_stacks1,/*stack base*/ 
+		204800,/*stack size*/
+		&thread_handles[0], /*thread handle*/
+		&thread_s[0]);/*thread entity address*/
+#endif
 
-	cyg_thread_create(5, thread_ctrl, (cyg_addrword_t) 1, "thread_voice",
-			(void *) thread_stacks[1], 204800, &threads_voice, &thread_s[1]);
-
+	cyg_thread_create(
+		5, 
+		thread_ctrl,
+		(cyg_addrword_t) 1, 
+		"thread_ctr",
+		(void *) thread_stacks0, 
+		STACKSIZE, 
+		&thread_handles[1], 
+		&thread_s[1]);
+		
 	/*setup*/
-	cyg_thread_resume(threads_isr);
-	cyg_thread_resume(threads_voice);
+	cyg_thread_resume(thread_handles[0]);
+	cyg_thread_resume(thread_handles[1]);
 	cyg_scheduler_start();
 
-	end: dprintf("@ok,main exit(0).\n");
+	dprintf("@ok,main exit(0).\n");
 
 	/*do some clean works*/
 

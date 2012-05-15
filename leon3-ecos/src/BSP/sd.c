@@ -46,18 +46,18 @@ void sd_init() {
 //------------------------------------------------------------------------
 unsigned char Write_Command_MMC(unsigned char cmd, unsigned long arg) {
 	unsigned char tmp;
-	unsigned char retry = 0; //ÖØ¸´²Ù×÷´ÎÊý
+	unsigned char retry = 0; //ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 
 	//SPI3_DESELECT();		//set MMC_Chip_Select to high (MMC/SD-Card disable)
 	spi2_8TxRx(0xFF); //send 8 Clock Impulse
 	//SPI3_SELECT(); 		//set MMC_Chip_Select to low (MMC/SD-Card active)
 
-	spi2_8TxRx(cmd | 0x40); //·Ö±ðÐ´ÈëÃüÁî
-	spi2_8TxRx(arg >> 24); //Êý¾Ý¶ÎµÚ4×Ö½Ú
-	spi2_8TxRx(arg >> 16); //Êý¾Ý¶ÎµÚ3×Ö½Ú
-	spi2_8TxRx(arg >> 8); //Êý¾Ý¶ÎµÚ2×Ö½Ú
-	spi2_8TxRx(arg); //Êý¾Ý¶ÎµÚ1×Ö½Ú
-	spi2_8TxRx(0x95); //CRCÐ§ÑéºÍ
+	spi2_8TxRx(cmd | 0x40); //ï¿½Ö±ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	spi2_8TxRx(arg >> 24); //ï¿½ï¿½Ý¶Îµï¿½4ï¿½Ö½ï¿½
+	spi2_8TxRx(arg >> 16); //ï¿½ï¿½Ý¶Îµï¿½3ï¿½Ö½ï¿½
+	spi2_8TxRx(arg >> 8); //ï¿½ï¿½Ý¶Îµï¿½2ï¿½Ö½ï¿½
+	spi2_8TxRx(arg); //ï¿½ï¿½Ý¶Îµï¿½1ï¿½Ö½ï¿½
+	spi2_8TxRx(0x95); //CRCÐ§ï¿½ï¿½ï¿½
 
 	//get 16 bit response
 	spi2_8TxRx(0xff); //read the first byte,ignore it.
@@ -79,7 +79,7 @@ unsigned char Write_Command_MMC(unsigned char cmd, unsigned long arg) {
 //	Routine for Init MMC/SD card(SPI-MODE)
 //------------------------------------------------------------------------
 unsigned char MMC_Init() {
-	unsigned char retry;
+	unsigned int retry;
 	unsigned char temp;
 	unsigned char i;
 
@@ -222,7 +222,7 @@ unsigned char Read_CID_MMC(unsigned char *Buffer)
 // 		name of the media
 //------------------------------------------------------------------------
 void MMC_get_volume_info(void) {
-	unsigned char i;
+	//unsigned char i;
 	int temp = 0;
 	VOLUME_INFO_TYPE MMC_volume_Info, *vinf;
 	//if(SD_DEBUG) printf("SD CARD Information Read Begin\n");
@@ -551,7 +551,7 @@ void MMC_GotoSectorOffset(unsigned long LBA, unsigned int offset) {
 #define N_BLOCKS	10
 void sd_test() {
 	unsigned int i = 0;
-	unsigned int j = 0;
+	//unsigned int j = 0;
 	char data_buf[512];
 	char data_read[512];
 
@@ -668,8 +668,8 @@ BYTE count /* Sector count (1..255) */
 	char* mbuff = buff;
 	unsigned char retry = 0;
 	unsigned char temp;
-	int sector_cnt = 0;
-	int tmp = 0;
+	//int sector_cnt = 0;
+	//int tmp = 0;
 
 	if (drv || !count)
 		return RES_PARERR;
@@ -799,7 +799,7 @@ BYTE count /* Sector count (1..255) */
 		return RES_WRPRT;
 
 	if (count == 1) { /* Single block write */
-		if (MMC_write_sector(sector, buff) < 0) {
+		if (MMC_write_sector(sector,(unsigned char *)buff) != 0) {
 			//&& MMC_write_sector(0xFE, buff)
 		} else {
 			count = 0;
@@ -817,7 +817,7 @@ BYTE count /* Sector count (1..255) */
 		 }
 		 }*/
 
-		tmp = MMC_write_sectors(sector, buff, count);
+		tmp = MMC_write_sectors(sector, (unsigned char *)buff, count);
 		if (tmp < 0) {
 			printf("disk_write:error!\n");
 		} else {

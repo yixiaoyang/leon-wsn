@@ -50,4 +50,6 @@ extern int8u_t rxbuf[];
 #define SADRH		0x22
 #endif // DEV_TYPE_TX
 
+void _dprintf_(const char *format, ...);
+
 #endif /* LEMON_H_ */

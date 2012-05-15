@@ -41,9 +41,9 @@
  ******************************************************************************/
 void netconfig(void)
 {
-	U16 saddr=0;
-	U16 panid=0;
-	U8 eadr[8]={0},i=0;
+	u16 saddr=0;
+	u16 panid=0;
+	u8 eadr[8]={0},i=0;
 	/* Read MAC(64-bit extended address) */
 	eadr[0] = uz2400d_sr(UZS_EADR_0);
 	eadr[1] = uz2400d_sr(UZS_EADR_1);
@@ -59,13 +59,13 @@ void netconfig(void)
 	/* Read PANID */
 	panid = uz2400d_sr(UZS_PANIDH)<<8&0xFF00;
 	panid += uz2400d_sr(UZS_PANIDL);
-	printk("LRF020 MAC Address: ");
+	printf("LRF020 MAC Address: ");
 	for(i=0;i<8;i++) {
-		printk("%2x: ",eadr[i]);
+		printf("%2x: ",eadr[i]);
 	}
 
-	printk("PANID: 0x%4x\n",panid);
-	printk("Short address: 0x%4x\n",saddr);
+	printf("PANID: 0x%4x\n",panid);
+	printf("Short address: 0x%4x\n",saddr);
 	return ;
 }
 
@@ -76,7 +76,7 @@ void netconfig(void)
  *	<< None
  *	--
  ******************************************************************************/
-void linkoutput( U8* buf, U16 len )
+void linkoutput( u8* buf, u16 len )
 {
 
 }
@@ -107,12 +107,12 @@ void linkoutput( U8* buf, U16 len )
  *	<< None
  *	--
  ******************************************************************************/
-int mac_output( U8* buf, U16 size, U8* dst_addr, U8 ack_bit )
+int mac_output( u8* buf, u16 size, u8* dst_addr, u8 ack_bit )
 {
 	/* Add IEEE802.15.4 MAC header */
 	ieee_mac_hdr* pkt = (ieee_mac_hdr*)txbuf;
-	U8 pkt_len=0;
-	static U8 seq = 0;
+	u8 pkt_len=0;
+	static u8 seq = 0;
 //*
 	pkt->frame_ctl.frm_type = FRM_TYPE_DATA;
 	pkt->frame_ctl.security_en = 0x0;
@@ -126,9 +126,9 @@ int mac_output( U8* buf, U16 size, U8* dst_addr, U8 ack_bit )
 	pkt->frame_ctl.frm_ver = FRM_VER_0;
 	pkt->frame_ctl.srcaddr_mode = ADDR_MOD_16;
 
-	printk("%#x\r\n",*((U16*)&pkt->frame_ctl));
-	printk("%#x\r\n",*((U8*)&pkt->frame_ctl));
-	printk("%#x\r\n",*((U8*)&pkt->frame_ctl+1));
+	printf("%#x\r\n",*((u16*)&pkt->frame_ctl));
+	printf("%#x\r\n",*((u8*)&pkt->frame_ctl));
+	printf("%#x\r\n",*((u8*)&pkt->frame_ctl+1));
 //*/
 	/*
 	pkt->frame_ctl[0] = 0x21;

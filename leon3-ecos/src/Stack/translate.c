@@ -1,3 +1,8 @@
+/*
+ * xiaoyang modify
+ *		@2012-4-27
+ *
+ */
 #include "includes.h"
 
 #define MAXRFRAME 144
@@ -44,6 +49,7 @@ mybool initnet(void)
 mybool initkeys(void)
 {
 	int index=0;
+	/*init all ports*/
 	for(index=0; index<PORTNUM; index++)
 	{
 		portKeys[index].used=FALSE;
@@ -56,7 +62,10 @@ mybool initkeys(void)
 	}
 	return TRUE;
 }
-
+/*
+ * check if a port is free
+ *
+ */
 mybool getkey(s8_t keynum)
 {
 	if(keynum<0 || keynum>=PORTNUM)
@@ -146,7 +155,6 @@ mybool f_insert(void * buffer, u8_t size)
 	
 	machead_p=machead_p; // avoid warning 	
 	
-	//printf("get in insert\n");
 	if(portKeys[portnum].used==FALSE)
 	{	
 		printf("port used = false, return\n");
@@ -155,17 +163,14 @@ mybool f_insert(void * buffer, u8_t size)
 	portbuf_p= &(portKeys[portnum].PB);
 	if(portbuf_p->writea)
 	{
-		//printf("write a of %d\n",portnum);
 		if(portbuf_p->fulla==FALSE)
 		{	
 			memcpy( &(portbuf_p->buffera[portbuf_p->indexa]), &buffer[IEEE_MAC_LEN+sizeof(struct FrameHead)],size-IEEE_MAC_LEN-sizeof(struct FrameHead));
 			portbuf_p->indexa+=(size-IEEE_MAC_LEN-sizeof(struct FrameHead));
-			//printf("add frame in %d :%d\n",portnum,portbuf_p->indexa);
 			if(fhead_p->more==FALSE)
 			{         
 				portbuf_p->fulla=TRUE;
 				portbuf_p->writea=FALSE;
-				//printf("a packet end\n");
 			}
 		}
 		else
@@ -175,7 +180,6 @@ mybool f_insert(void * buffer, u8_t size)
 	}
 	else
 	{
-		//printf("write b of %d\n",portnum);
 		if(portbuf_p->fullb==FALSE)
 		{
 			memcpy( &(portbuf_p->bufferb[portbuf_p->indexb]), &buffer[IEEE_MAC_LEN+sizeof(struct FrameHead)], size-IEEE_MAC_LEN-sizeof(struct FrameHead));
@@ -184,7 +188,6 @@ mybool f_insert(void * buffer, u8_t size)
 			{
 				portbuf_p->fullb=TRUE;
 				portbuf_p->writea=TRUE;
-				//printf("a packet end\n");
 			}
 		}
 		else
@@ -205,18 +208,13 @@ void dsr_network(void)
 	int aa=0;
 	while(TRUE)
 	{
-		printf("check!!!!!!!!!!!!!!!\n");
+		printf("rx loop...\n");
 		if( (getsizeF=RF_Rx(bufferF))!=0 )
 		{	
-			printf("get one !!:%d\n",getsizeF);
-			/*for(aa=0; aa<getsizeF; aa++)
-			{
-				printf(" | %d",bufferF[aa]);
-			}
-			printf("\n");*/
+			printf("get a frame:%d\n",getsizeF);
 			f_insert((void *)bufferF, getsizeF);
 		}
-		//printf("end check\n");
+		printf("end rx loop!\n");
 	}
 }
 

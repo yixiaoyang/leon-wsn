@@ -1,6 +1,6 @@
 
 LIB	= bsp.a
-COBJS	=uz2400d.o rf.o VS1003x.o data.o ov7660.o led.o sd.o ff.o sccb.o
+COBJS	=data.o led.o sd.o
 
 all:	$(LIB)
 $(LIB):	$(COBJS)

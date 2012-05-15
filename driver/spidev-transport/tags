@@ -1,0 +1,282 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDR_MOD_16	ieee802_15_4.h	22;"	d
+ADDR_MOD_64	ieee802_15_4.h	23;"	d
+ADDR_MOD_RSVD	ieee802_15_4.h	21;"	d
+ARCH	Makefile	/^ARCH=arm-linux-$/;"	m
+ARRAY_SIZE	app/1/spidev_test.c	24;"	d	file:
+ARRAY_SIZE	app/2/spi_test.c	11;"	d	file:
+BIT_0	heads.h	17;"	d
+BIT_1	heads.h	18;"	d
+BIT_10	heads.h	27;"	d
+BIT_2	heads.h	19;"	d
+BIT_3	heads.h	20;"	d
+BIT_4	heads.h	21;"	d
+BIT_5	heads.h	22;"	d
+BIT_6	heads.h	23;"	d
+BIT_7	heads.h	24;"	d
+BIT_8	heads.h	25;"	d
+BIT_9	heads.h	26;"	d
+CC	Makefile	/^CC=$(ARCH)gcc$/;"	m
+CC	app/2/Makefile	/^CC=arm-linux-gcc$/;"	m
+DEBUG	Makefile	/^DEBUG=y$/;"	m
+DEV_TYPE_TX	heads.h	32;"	d
+DUMP	Makefile	/^DUMP=$(ARCH)objdump$/;"	m
+EADR_0	heads.h	35;"	d
+EADR_0	heads.h	47;"	d
+EADR_1	heads.h	36;"	d
+EADR_1	heads.h	48;"	d
+EADR_2	heads.h	37;"	d
+EADR_2	heads.h	49;"	d
+EADR_3	heads.h	38;"	d
+EADR_3	heads.h	50;"	d
+EADR_4	heads.h	39;"	d
+EADR_4	heads.h	51;"	d
+EADR_5	heads.h	40;"	d
+EADR_5	heads.h	52;"	d
+EADR_6	heads.h	41;"	d
+EADR_6	heads.h	53;"	d
+EADR_7	heads.h	42;"	d
+EADR_7	heads.h	54;"	d
+FRM_TYPE_ACK	ieee802_15_4.h	14;"	d
+FRM_TYPE_BEACON	ieee802_15_4.h	12;"	d
+FRM_TYPE_CMD	ieee802_15_4.h	15;"	d
+FRM_TYPE_DATA	ieee802_15_4.h	13;"	d
+FRM_VER_0	ieee802_15_4.h	26;"	d
+FRM_VER_1	ieee802_15_4.h	27;"	d
+HALT	rf.h	16;"	d
+HEADS_H_	heads.h	2;"	d
+IEEE802_15_4_H_	ieee802_15_4.h	9;"	d
+IEEE_MAC_LEN	ieee802_15_4.h	53;"	d
+INC	Makefile	/^INC=$(KERNELDIR)\/include #$(PWD)\/*.h$/;"	m
+INC	app/2/Makefile	/^INC=$/;"	m
+INSTALLDIR	Makefile	/^INSTALLDIR=.\/$/;"	m
+KERNELDIR	Makefile	/^KERNELDIR=\/opt\/linux\/EmbedSky\/linux-2.6.30.4$/;"	m
+LIB	app/2/Makefile	/^LIB=$/;"	m
+MOD_NAME	Makefile	/^MOD_NAME=lrf020$/;"	m
+NO_ADDRESS_FIELD	ieee802_15_4.h	20;"	d
+N_SPI_MINORS	spidev.c	56;"	d	file:
+PANIDH	heads.h	30;"	d
+PANIDL	heads.h	29;"	d
+PAN_compress	ieee802_15_4.h	/^	u16 PAN_compress:1;$/;"	m	struct:frm_ctrl
+PWD	Makefile	/^PWD:=$(shell pwd)$/;"	m
+RF_AUTO_EXT_PA_CTRL_OFF	rf.c	/^void RF_AUTO_EXT_PA_CTRL_OFF(struct spidev_data* rf_dev)$/;"	f
+RF_AUTO_EXT_PA_CTRL_ON	rf.c	/^void RF_AUTO_EXT_PA_CTRL_ON(struct spidev_data* rf_dev)$/;"	f
+RF_BUF_SIZE	spidev.h	145;"	d
+RF_CAL_SLEEP_CLK	rf.c	/^u32 RF_CAL_SLEEP_CLK(struct spidev_data* rf_dev,u8 clk_div)$/;"	f
+RF_CHIP_INITIALIZE	rf.c	/^void RF_CHIP_INITIALIZE(struct spidev_data* rf_dev)$/;"	f
+RF_DBG	heads.h	62;"	d
+RF_DEV_ID	heads.h	61;"	d
+RF_H_	rf.h	9;"	d
+RF_NET_CONFIG	rf.c	/^void RF_NET_CONFIG(struct spidev_data* rf_dev)$/;"	f
+RF_NORMAL_SPEED	rf.c	/^void RF_NORMAL_SPEED(struct spidev_data* rf_dev)$/;"	f
+RF_Rx	rf.c	/^u32 RF_Rx(struct spidev_data* rf_dev,u8 *buffer)$/;"	f
+RF_SET_MAC_ADDR	rf.c	/^void RF_SET_MAC_ADDR(struct spidev_data* rf_dev,const u8* eadr)$/;"	f
+RF_SET_PAN_ID	rf.c	/^void RF_SET_PAN_ID(struct spidev_data* rf_dev,u16 panid)$/;"	f
+RF_SET_SHORT_ADDRESS	rf.c	/^void RF_SET_SHORT_ADDRESS(struct spidev_data* rf_dev,u16 saddr)$/;"	f
+RF_TEST	rf.c	/^void RF_TEST(struct spidev_data* rf_dev)$/;"	f
+RF_TURBO_SPEED_1M	rf.c	/^void RF_TURBO_SPEED_1M(struct spidev_data* rf_dev)$/;"	f
+RF_TURBO_SPEED_2M	rf.c	/^void RF_TURBO_SPEED_2M(struct spidev_data* rf_dev)$/;"	f
+RF_TxN	rf.c	/^s8 RF_TxN(struct spidev_data* rf_dev,u8 *tx_data, u8 tx_data_len, u8 ack_req)$/;"	f
+RF_TxN_EN	rf.h	20;"	d
+SADRH	heads.h	44;"	d
+SADRH	heads.h	56;"	d
+SADRL	heads.h	43;"	d
+SADRL	heads.h	55;"	d
+SLV_DESELECT	heads.h	74;"	d
+SLV_SELECT	heads.h	73;"	d
+SPIDEV_H	spidev.h	23;"	d
+SPIDEV_MAJOR	spidev.c	55;"	d	file:
+SPI_3WIRE	spidev.h	57;"	d
+SPI_BUS	heads.h	68;"	d
+SPI_BUS_CS0	heads.h	65;"	d
+SPI_BUS_SPEED	heads.h	60;"	d
+SPI_CPHA	spidev.h	47;"	d
+SPI_CPOL	spidev.h	48;"	d
+SPI_CS_HIGH	spidev.h	55;"	d
+SPI_IOC_MAGIC	spidev.h	64;"	d
+SPI_IOC_MESSAGE	spidev.h	124;"	d
+SPI_IOC_RD_BITS_PER_WORD	spidev.h	136;"	d
+SPI_IOC_RD_LSB_FIRST	spidev.h	132;"	d
+SPI_IOC_RD_MAX_SPEED_HZ	spidev.h	140;"	d
+SPI_IOC_RD_MODE	spidev.h	128;"	d
+SPI_IOC_WR_BITS_PER_WORD	spidev.h	137;"	d
+SPI_IOC_WR_LSB_FIRST	spidev.h	133;"	d
+SPI_IOC_WR_MAX_SPEED_HZ	spidev.h	141;"	d
+SPI_IOC_WR_MODE	spidev.h	129;"	d
+SPI_LOOP	spidev.h	58;"	d
+SPI_LSB_FIRST	spidev.h	56;"	d
+SPI_MODE_0	spidev.h	50;"	d
+SPI_MODE_1	spidev.h	51;"	d
+SPI_MODE_2	spidev.h	52;"	d
+SPI_MODE_3	spidev.h	53;"	d
+SPI_MODE_MASK	spidev.c	70;"	d	file:
+SPI_MSGSIZE	spidev.h	121;"	d
+SRC	app/2/Makefile	/^SRC=spi_test.c$/;"	m
+STANDBY	rf.h	17;"	d
+TARGET	app/2/Makefile	/^TARGET=spi_test$/;"	m
+USER_BUFF_SIZE	heads.h	59;"	d
+UZ2400D_H_	uz2400d.h	9;"	d
+UZL_GPIODIR	uz2400d.h	66;"	d
+UZL_RFCTRL0	uz2400d.h	53;"	d
+UZL_RFCTRL1	uz2400d.h	54;"	d
+UZL_RFCTRL2	uz2400d.h	55;"	d
+UZL_RFCTRL3	uz2400d.h	56;"	d
+UZL_RFCTRL4	uz2400d.h	57;"	d
+UZL_RFCTRL5	uz2400d.h	58;"	d
+UZL_RFCTRL50	uz2400d.h	70;"	d
+UZL_RFCTRL51	uz2400d.h	71;"	d
+UZL_RFCTRL52	uz2400d.h	72;"	d
+UZL_RFCTRL53	uz2400d.h	73;"	d
+UZL_RFCTRL59	uz2400d.h	74;"	d
+UZL_RFCTRL6	uz2400d.h	59;"	d
+UZL_RFCTRL7	uz2400d.h	60;"	d
+UZL_RFCTRL73	uz2400d.h	75;"	d
+UZL_RFCTRL74	uz2400d.h	76;"	d
+UZL_RFCTRL75	uz2400d.h	77;"	d
+UZL_RFCTRL76	uz2400d.h	78;"	d
+UZL_RFCTRL8	uz2400d.h	61;"	d
+UZL_RFSTATE	uz2400d.h	63;"	d
+UZL_SECCTRL	uz2400d.h	67;"	d
+UZL_TESTMODE	uz2400d.h	64;"	d
+UZS_BBREG3	uz2400d.h	47;"	d
+UZS_BBREG4	uz2400d.h	48;"	d
+UZS_BBREG5	uz2400d.h	49;"	d
+UZS_BBREG6	uz2400d.h	50;"	d
+UZS_EADR_0	uz2400d.h	21;"	d
+UZS_EADR_1	uz2400d.h	22;"	d
+UZS_EADR_2	uz2400d.h	23;"	d
+UZS_EADR_3	uz2400d.h	24;"	d
+UZS_EADR_4	uz2400d.h	25;"	d
+UZS_EADR_5	uz2400d.h	26;"	d
+UZS_EADR_6	uz2400d.h	27;"	d
+UZS_EADR_7	uz2400d.h	28;"	d
+UZS_FIFOEN	uz2400d.h	32;"	d
+UZS_GATECLK	uz2400d.h	37;"	d
+UZS_INTMSK	uz2400d.h	42;"	d
+UZS_ISRSTS	uz2400d.h	41;"	d
+UZS_ISRSTS_MACTMRIF	uz2400d.h	86;"	d
+UZS_ISRSTS_RXIF	uz2400d.h	84;"	d
+UZS_ISRSTS_SECIF	uz2400d.h	85;"	d
+UZS_ISRSTS_SLPIF	uz2400d.h	88;"	d
+UZS_ISRSTS_TXG1IF	uz2400d.h	82;"	d
+UZS_ISRSTS_TXG2IF	uz2400d.h	83;"	d
+UZS_ISRSTS_TXNIF	uz2400d.h	81;"	d
+UZS_ISRSTS_WAKEIF	uz2400d.h	87;"	d
+UZS_PACON1	uz2400d.h	31;"	d
+UZS_PANIDH	uz2400d.h	16;"	d
+UZS_PANIDL	uz2400d.h	15;"	d
+UZS_RFCTL	uz2400d.h	45;"	d
+UZS_RXFLUSH	uz2400d.h	30;"	d
+UZS_SADRH	uz2400d.h	19;"	d
+UZS_SADRL	uz2400d.h	18;"	d
+UZS_SLPACK	uz2400d.h	43;"	d
+UZS_SOFTRST	uz2400d.h	38;"	d
+UZS_TXNTRIG	uz2400d.h	34;"	d
+UZS_TXPEMISP	uz2400d.h	39;"	d
+UZS_TXSR	uz2400d.h	36;"	d
+UZS_TXSR_CCAFAIL	uz2400d.h	95;"	d
+UZS_TXSR_TXG1FNT	uz2400d.h	93;"	d
+UZS_TXSR_TXG1S	uz2400d.h	91;"	d
+UZS_TXSR_TXG2FNT	uz2400d.h	94;"	d
+UZS_TXSR_TXG2S	uz2400d.h	92;"	d
+UZS_TXSR_TXNS	uz2400d.h	90;"	d
+UZS_TXSR_TXRETRY	uz2400d.h	96;"	d
+V_STR	heads.h	70;"	d
+ack_req	ieee802_15_4.h	/^	u16 ack_req:1;$/;"	m	struct:frm_ctrl
+bits	app/1/spidev_test.c	/^static uint8_t bits = 8;$/;"	v	file:
+bits	app/2/spi_test.c	/^static uint8_t bits = 8;$/;"	v	file:
+bits_per_word	spidev.h	/^	__u8		bits_per_word;$/;"	m	struct:spi_ioc_transfer
+buf_lock	spidev.h	/^	struct mutex		buf_lock;$/;"	m	struct:spidev_data	typeref:struct:spidev_data::mutex
+buffer	spidev.h	/^	u8			*buffer;$/;"	m	struct:spidev_data
+bufsiz	spidev.c	/^static unsigned bufsiz = 4096;$/;"	v	file:
+cs_change	spidev.h	/^	__u8		cs_change;$/;"	m	struct:spi_ioc_transfer
+delay	app/1/spidev_test.c	/^static uint16_t delay;$/;"	v	file:
+delay	app/2/spi_test.c	/^static uint16_t delay;$/;"	v	file:
+delay_usecs	spidev.h	/^	__u16		delay_usecs;$/;"	m	struct:spi_ioc_transfer
+des_ADDR	ieee802_15_4.h	/^	u8 des_ADDR[2];$/;"	m	struct:ieee15_4_mac_hdr
+des_PANID	ieee802_15_4.h	/^	u8 des_PANID[2];$/;"	m	struct:ieee15_4_mac_hdr
+device	app/1/spidev_test.c	/^static const char *device = "\/dev\/LRF020";$/;"	v	file:
+device	app/2/spi_test.c	/^static const char *device = "\/dev\/LRF020";$/;"	v	file:
+device_entry	spidev.h	/^	struct list_head	device_entry;$/;"	m	struct:spidev_data	typeref:struct:spidev_data::list_head
+devt	spidev.h	/^	dev_t			devt;$/;"	m	struct:spidev_data
+dstaddr_mode	ieee802_15_4.h	/^	u16 dstaddr_mode:2;$/;"	m	struct:frm_ctrl
+frame_ctl	ieee802_15_4.h	/^	frm_ctrl_t frame_ctl;$/;"	m	struct:ieee15_4_mac_hdr
+frm_ctrl	ieee802_15_4.h	/^typedef struct frm_ctrl$/;"	s
+frm_ctrl_t	ieee802_15_4.h	/^} frm_ctrl_t;$/;"	t	typeref:struct:frm_ctrl
+frm_pending	ieee802_15_4.h	/^	u16 frm_pending:1;$/;"	m	struct:frm_ctrl
+frm_type	ieee802_15_4.h	/^	u16 frm_type:3;$/;"	m	struct:frm_ctrl
+frm_ver	ieee802_15_4.h	/^	u16 frm_ver:2;$/;"	m	struct:frm_ctrl
+ieee15_4_mac_hdr	ieee802_15_4.h	/^typedef struct ieee15_4_mac_hdr {$/;"	s
+ieee_mac_hdr	ieee802_15_4.h	/^} ieee_mac_hdr;$/;"	t	typeref:struct:ieee15_4_mac_hdr
+len	spidev.h	/^	__u32		len;$/;"	m	struct:spi_ioc_transfer
+lrf020-objs	Makefile	/^lrf020-objs	:=	rf.o uz2400d.o spidev.o$/;"	m
+main	app/1/spidev_test.c	/^int main(int argc, char *argv[])$/;"	f
+main	app/2/spi_test.c	/^main (int argc, char *argv[])$/;"	f
+minors	spidev.c	/^static unsigned long	minors[N_SPI_MINORS \/ BITS_PER_LONG];$/;"	v	file:
+mode	app/1/spidev_test.c	/^static uint8_t mode;$/;"	v	file:
+mode	app/2/spi_test.c	/^static uint8_t mode;$/;"	v	file:
+obj-m	Makefile	/^obj-m 	:=	$(MOD_NAME).o$/;"	m
+pabort	app/1/spidev_test.c	/^static void pabort(const char *s)$/;"	f	file:
+pabort	app/2/spi_test.c	/^pabort (const char *s)$/;"	f	file:
+pad	spidev.h	/^	__u32		pad;$/;"	m	struct:spi_ioc_transfer
+parse_opts	app/1/spidev_test.c	/^void parse_opts(int argc, char *argv[])$/;"	f
+parse_opts	app/2/spi_test.c	/^parse_opts (int argc, char *argv[])$/;"	f
+payload	ieee802_15_4.h	/^	u8 payload[0];$/;"	m	struct:ieee15_4_mac_hdr
+print_usage	app/1/spidev_test.c	/^void print_usage(const char *prog)$/;"	f
+print_usage	app/2/spi_test.c	/^print_usage (const char *prog)$/;"	f
+reserved1	ieee802_15_4.h	/^	u16 reserved1:1;$/;"	m	struct:frm_ctrl
+reserved2	ieee802_15_4.h	/^	u16 reserved2:2;$/;"	m	struct:frm_ctrl
+rf_delay	heads.h	75;"	d
+rf_rbuf	uz2400d.c	/^static u8 rf_rbuf[RF_BUF_SIZE];$/;"	v	file:
+rf_tbuf	uz2400d.c	/^static u8 rf_tbuf[RF_BUF_SIZE];$/;"	v	file:
+rx_buf	spidev.h	/^	__u64		rx_buf;$/;"	m	struct:spi_ioc_transfer
+security_en	ieee802_15_4.h	/^	u16 security_en:1;$/;"	m	struct:frm_ctrl
+sequence	ieee802_15_4.h	/^	u8 sequence;$/;"	m	struct:ieee15_4_mac_hdr
+speed	app/1/spidev_test.c	/^static uint32_t speed = 500000;$/;"	v	file:
+speed	app/2/spi_test.c	/^static uint32_t speed = 500000;$/;"	v	file:
+speed_hz	spidev.h	/^	__u32		speed_hz;$/;"	m	struct:spi_ioc_transfer
+spi	spidev.h	/^	struct spi_device	*spi;$/;"	m	struct:spidev_data	typeref:struct:spidev_data::spi_device
+spi_ioc_transfer	spidev.h	/^struct spi_ioc_transfer {$/;"	s
+spi_lock	spidev.h	/^	spinlock_t		spi_lock;$/;"	m	struct:spidev_data
+spidev_class	spidev.c	/^static struct class *spidev_class;$/;"	v	typeref:struct:class	file:
+spidev_complete	spidev.c	/^static void spidev_complete(void *arg)$/;"	f	file:
+spidev_data	spidev.h	/^struct spidev_data {$/;"	s
+spidev_exit	spidev.c	/^module_exit(spidev_exit);$/;"	v
+spidev_exit	spidev.c	/^static void __exit spidev_exit(void)$/;"	f	file:
+spidev_fops	spidev.c	/^static struct file_operations spidev_fops = {$/;"	v	typeref:struct:file_operations	file:
+spidev_init	spidev.c	/^module_init(spidev_init);$/;"	v
+spidev_init	spidev.c	/^static int __init spidev_init(void)$/;"	f	file:
+spidev_ioctl	spidev.c	/^spidev_ioctl(struct file *filp, unsigned int cmd, unsigned long arg)$/;"	f	file:
+spidev_message	spidev.c	/^static int spidev_message(struct spidev_data *spidev,$/;"	f	file:
+spidev_open	spidev.c	/^static int spidev_open(struct inode *inode, struct file *filp)$/;"	f	file:
+spidev_probe	spidev.c	/^static int spidev_probe(struct spi_device *spi)$/;"	f	file:
+spidev_read	spidev.c	/^spidev_read(struct file *filp, char __user *buf, size_t count, loff_t *f_pos)$/;"	f	file:
+spidev_release	spidev.c	/^static int spidev_release(struct inode *inode, struct file *filp)$/;"	f	file:
+spidev_remove	spidev.c	/^static int spidev_remove(struct spi_device *spi)$/;"	f	file:
+spidev_spi	spidev.c	/^static struct spi_driver spidev_spi = {$/;"	v	typeref:struct:spi_driver	file:
+spidev_sync	spidev.c	/^spidev_sync(struct spidev_data *spidev, struct spi_message *message)$/;"	f	file:
+spidev_sync_read	spidev.c	/^spidev_sync_read(struct spidev_data *spidev, size_t len)$/;"	f
+spidev_sync_wr	spidev.c	/^spidev_sync_wr(struct spidev_data *spidev ,u8* tx_buf, u8* rx_buf,size_t len)$/;"	f
+spidev_sync_write	spidev.c	/^spidev_sync_write(struct spidev_data *spidev, size_t len)$/;"	f
+spidev_write	spidev.c	/^spidev_write(struct file *filp, const char __user *buf,$/;"	f	file:
+src_ADDR	ieee802_15_4.h	/^	u8 src_ADDR[2];$/;"	m	struct:ieee15_4_mac_hdr
+src_PANID	ieee802_15_4.h	/^	u8 src_PANID[2];$/;"	m	struct:ieee15_4_mac_hdr
+srcaddr_mode	ieee802_15_4.h	/^	u16 srcaddr_mode:2;$/;"	m	struct:frm_ctrl
+this_device_name	spidev.c	/^const char this_device_name[] = "LRF020";$/;"	v
+this_driver_name	spidev.c	/^const char this_driver_name[] = "LRF020";$/;"	v
+transfer	app/1/spidev_test.c	/^static void transfer(int fd)$/;"	f	file:
+transfer	app/2/spi_test.c	/^transfer (int fd)$/;"	f	file:
+transfer2	app/2/spi_test.c	/^void transfer2(int fd)$/;"	f
+tx_buf	spidev.h	/^	__u64		tx_buf;$/;"	m	struct:spi_ioc_transfer
+users	spidev.h	/^	unsigned		users;$/;"	m	struct:spidev_data
+uz2400d_lr	uz2400d.c	/^u8 uz2400d_lr(struct spidev_data* spidev,u16 laddr)$/;"	f
+uz2400d_lr_block	uz2400d.c	/^ssize_t uz2400d_lr_block(struct spidev_data* spidev,u16 laddr, u8* buf, u16 size)$/;"	f
+uz2400d_lw	uz2400d.c	/^ssize_t uz2400d_lw(struct spidev_data* spidev,u16 laddr, u8 value)$/;"	f
+uz2400d_lw_block	uz2400d.c	/^ssize_t uz2400d_lw_block(struct spidev_data* spidev,u16 laddr, u8* buf, u16 size)$/;"	f
+uz2400d_sr	uz2400d.c	/^u8 uz2400d_sr(struct spidev_data* spidev,u8 saddr)$/;"	f
+uz2400d_sw	uz2400d.c	/^ssize_t uz2400d_sw(struct spidev_data* spidev,u8 saddr, u8 value)$/;"	f

@@ -1,0 +1,9 @@
+src/drv_api.o.d:  \
+ /home/water/workspace/WSN-Audio/Software/fpga/ecos/ecos-3.0/packages/hal/common/v3_0/src/drv_api.c \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/system.h
+src/dbg-threads-syscall.o.d:  \
+ /home/water/workspace/WSN-Audio/Software/fpga/ecos/ecos-3.0/packages/hal/common/v3_0/src/dbg-threads-syscall.c \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/system.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal_sparc.h \
+  /home/water/workspace/WSN-Audio/Software/fpga/wan/ecos/ecos_install/include/pkgconf/hal_sparc_leon3.h

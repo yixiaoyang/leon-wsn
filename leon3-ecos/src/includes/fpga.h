@@ -1,8 +1,8 @@
 /*
  * fpga.h
  *
- *  Created on: 2011-2-22
- *      Author: hgdytz
+ *  Created on: 2012-5-6
+ *      Author: xiaoyang
  */
 
 #ifndef FPGA_H_
@@ -16,7 +16,11 @@
 
 /*apb uart*/
 #define UART0_BASE	0x80000100
+/*uart1 0x80000400,apbuart,uart0 0x80000100 AHB uart*/
 
-//uart1 0x80000400,apbuart,uart0 0x80000100 AHB uart
+#define IRQMP_BASE	0x80000200
+#define I2CMST_BASE 0x80000700
+#define AIN_BASE		0x80000400
+#define CK_GEN_BASE 0x80000B00
 
 #endif /* FPGA_H_ */

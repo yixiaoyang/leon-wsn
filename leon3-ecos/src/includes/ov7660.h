@@ -67,7 +67,7 @@ void OV7660_conf_window(int16u_t startx, int16u_t starty,
  */
 int8u_t OV7660_init(void);
 void OV7660_work();
-void ov7070_pin_test();
+void ov7660_pin_test();
 
 #endif /* _OV7660_H */
 
