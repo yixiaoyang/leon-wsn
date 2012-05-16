@@ -59,7 +59,7 @@ FILE *streamfile;
 #include "image.h"
 
 
-#define RAW2STATIC	YES
+#define RAW2STATIC	NO
 #if RAW2STATIC
 FILE* raw;
 #endif

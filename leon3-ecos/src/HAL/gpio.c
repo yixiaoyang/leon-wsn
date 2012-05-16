@@ -25,10 +25,7 @@ inline void gpio_init_gpio(int8u_t pbase, int8u_t pmask) {
 	REG32(GPIO_BASE+pbase+0x18) &= (8 << (~pmask));
 }
 
-/*
- * set out:0
- * set in:1
- */
+/*(set out:0,set in:1)*/
 inline void gpio_make_out(int8u_t pbase, int8u_t pmask) {
 	//port dir
 	REG32(GPIO_BASE+pbase+0x08) &= (~pmask);
@@ -64,7 +61,37 @@ inline int8u_t gpio_read_group(int8u_t pbase)
 	return (int8u_t)(REG32(GPIO_BASE+pbase));
 }
 
-/*end of file*/
+/*xiaoyang add @2012-5-15 for int test*/
+inline void gpio_int_msk(int8u_t pbase,int8u_t pmask)
+{
+	/*interrupt mask(0:masked,1:enabled)*/
+	REG32(GPIO_BASE+pbase+0x0C) &= (~pmask);
+}
+
+inline void gpio_int_en(int8u_t pbase,int8u_t pmask)
+{	
+	/*interrupt mask(0:masked,1:enabled)*/
+	REG32(GPIO_BASE+pbase+0x0C) |= pmask;
+}
+
+inline void gpio_pol(int8u_t pbase,int8u_t pmask)
+{
+	/*interrupt polarity(0:low/failing,1:high/rising)*/
+	REG32(GPIO_BASE+pbase+0x10) = pmask;
+}
+
+inline void gpio_set_lev(int8u_t pbase,int8u_t pmask)
+{
+	/*interrupt edge(0:level,1:edge)*/
+	REG32(GPIO_BASE+pbase+0x14) &= (~pmask);
+}
+inline void gpio_set_edg(int8u_t pbase,int8u_t pmask)
+{
+	/*interrupt edge(0:level,1:edge)*/
+	REG32(GPIO_BASE+pbase+0x14) = pmask;
+}
+
+/*reading test*/
 void gpio_test() {
 	//gpio_make_in(PORTA, 0xff);//make io[0-7] as pin
 	printf("read PORTA,PCLK,VSYNC,HREF:%4x,%4x,%4x,%4x\n",
@@ -73,3 +100,6 @@ void gpio_test() {
 			gpio_read(PORTB,1<<6),
 			gpio_read(PORTB,1<<7));
 }
+
+/*end of file*/
+

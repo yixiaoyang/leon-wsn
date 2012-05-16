@@ -1,3 +1,6 @@
+#ifndef _SIM_H_
+#define _SIM_H_
+
 /************************************************************************
  *
  *  sim.h, part of (TMN encoder)
@@ -455,3 +458,5 @@ struct _buffer{
 	unsigned int input_size;
 	unsigned int output_size;
 }mBuffer;
+
+#endif

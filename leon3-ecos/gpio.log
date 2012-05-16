@@ -1,0 +1,32 @@
++---------------+
+|    IO PINS    |
++---------------+
+用于OV7670管脚：
+    OV7660_PCLK，OV7660_VSYNC,OV7660_HREF,OV7660_XCLK_EN
+用于SPI2模拟：
+    SPI2_CLK，SPI2_MISO，SPI2_MOSI
+用于LED：
+    LED_G[0-1]
+用于SCCB协议模拟:
+    SCCB_CLK,SCCB_DATA
+用于摄像头数据采集(速率慢):
+    OV7660_DATA[0-7]   
+
+/*GPIO PORTA PORTB */
+gpio[0-13]     ==> IO_B[0-13]
+PORTA:
+    gpio[0-7] for camera input,用于摄像头的gpio采集
+PORTB:
+    gpio[8] SCCB接口CLK使用
+    gpio[9] OV7660的OV7660_PCLK管脚   
+    gpio[10] SCCB接口DAT使用
+    gpio[11] SPI2_MOSI,spi2的模拟
+    gpio[12] SPI2_MISO,spi2的模拟
+    gpio[13] SPI2_CLK,spi2的模拟
+    gpio[14] OV7660的VSYNC信号输出
+    gpio[15] OV7660的HREF信号输出   
+PORTC:
+    gpio[16-17] LED_G[0-1]
+    gpio[18-22]    ==>    spi
+PORTE：
+    PORTE[0] OV7660的XCLK输入使能

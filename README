@@ -40,6 +40,11 @@
 	
 2012-5-4
 	--integration of software project
+
+2012-5-12
+	--add interrupt testing code in intr.c/intr.h
+	--add gpio-irq interface
+	--next step:testing irq & interrupt
 	
 +---------------+
 |	IO PINS		|

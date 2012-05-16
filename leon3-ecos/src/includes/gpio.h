@@ -106,6 +106,13 @@ void gpio_toggle(int8u_t pbase, int8u_t val);
 int16u_t gpio_read(int8u_t pbase, int8u_t val);
 void gpio_make_in(int8u_t pbase, int8u_t val);
 
+/*xiaoyang add @2012-5-15*/
+void gpio_int_msk(int8u_t pbase,int8u_t pmask);
+void gpio_int_en(int8u_t pbase,int8u_t pmask);
+void gpio_pol(int8u_t pbase,int8u_t pmask);
+void gpio_set_lev(int8u_t pbase,int8u_t pmask);
+void gpio_set_edg(int8u_t pbase,int8u_t pmask);
+
 //
 void gpio_test();
 
