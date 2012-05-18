@@ -26,4 +26,4 @@ git的常用命令
 	git branch newBranch	
 	#切换到分支
 	git checkout newBranch
-
+	git pull . newBranch
