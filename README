@@ -45,7 +45,10 @@
 	--add interrupt testing code in intr.c/intr.h
 	--add gpio-irq interface
 	--next step:testing irq & interrupt
-	
+
+2012-5-18
+	--integration and add vtask.c systask.c
+
 +---------------+
 |	IO PINS		|
 +---------------+
