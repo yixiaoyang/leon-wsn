@@ -14,3 +14,16 @@ git在linux上搭建比较简单。
 (4) git clone 已有的工程目录试试看是否成功。一般到这步就没有问题了。
 
 参考：http://www.linuxidc.com/Linux/2011-04/35036.htm
+
+git的常用命令
+(1) 提交过程
+	git add -A
+	git commit -a -m "add video module"
+	git pull
+	git push
+(2) 分支操作
+	#新建分支
+	git branch newBranch	
+	#切换到分支
+	git checkout newBranch
+
