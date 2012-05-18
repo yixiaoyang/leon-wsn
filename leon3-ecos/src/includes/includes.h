@@ -42,6 +42,13 @@
 #include "VS1003x.h"
 #include "uart.h"
 
+#include "ov7660.h"
+//#include "sd.h"
+/*for FS*/
+#include "sd.h"
+#include "FAT32.h"
+#include "ff.h"
+#include "diskio.h"
 #include "ck_gen.h"
 #include "i2cmst.h"
 

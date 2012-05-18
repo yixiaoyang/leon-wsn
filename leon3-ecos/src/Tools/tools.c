@@ -11,6 +11,28 @@
  * Author: xiaoyang
  * Created: 2011-9-22
  * Parameters:
+ * Description:printf with cyg_mutex_lock() protection
+ */
+void _dprintf_(const char *format, ...) {
+#if _DEBUG_
+	va_list arg;
+	char tmp[256];
+	va_start(arg, format);
+	vsprintf(tmp, format, arg);
+	va_end(arg);
+	/* note: printf() must be protected by a call to cyg_mutex_lock() */
+	cyg_mutex_lock(&cliblock);
+	{
+		printf("%s", tmp);
+	}
+	cyg_mutex_unlock(&cliblock);
+#endif
+}
+
+/*
+ * Author: xiaoyang
+ * Created: 2011-9-22
+ * Parameters:
  * Description:for system delay,not correctly.
  */
 void delayus(int32u_t us) {
@@ -24,8 +46,8 @@ void delayus(int32u_t us) {
 /*
  * big/little endien check
  * return
- * 		0��Big_endia
- * 		1��Little_endia
+ * 		0:Big_endia
+ * 		1:Little_endia
  */
 int check_cpu_endien() {
 	union un {

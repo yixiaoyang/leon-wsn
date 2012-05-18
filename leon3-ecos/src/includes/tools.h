@@ -10,10 +10,9 @@
 #ifndef TOOLS_H_
 #define TOOLS_H_
 
+void _dprintf_(const char *format, ...);
 void delayus(int32u_t us);
 void testing();
 int check_cpu_endien();
-
-//#define delayus delayus
 
 #endif /* TOOLS_H_ */

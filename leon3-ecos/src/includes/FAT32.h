@@ -1,3 +1,6 @@
+#ifndef _FAT32_H
+#define _FAT32_H
+
 #include <stdio.h>
 #include "types.h"
 #include "sd.h"
@@ -136,4 +139,6 @@ struct FAT32_Init_Arg
 void FAT32_Test();
 
 /*end of file*/
+
+#endif
 
