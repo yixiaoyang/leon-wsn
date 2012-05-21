@@ -599,17 +599,15 @@ void sd_test() {
 		printf("\nSD Card Test over!\n");
 }
 
-//
-// FAT FS surpport
-//
-
 /*
  *
  * xiaoyang yi
- * 2011-11-1
- *
- * prot fatfs to leon3
- */
+ *  2011-11-1
+ * 
+ * Warning:
+ *		Below interface is necessiry for FATFS surpporting
+ * 		For disk_write,block writing is not working! So I can just read 512 bytes verytime.
+ */	
 
 static volatile DSTATUS Stat = STA_NOINIT;
 

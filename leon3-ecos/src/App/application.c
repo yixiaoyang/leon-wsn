@@ -163,14 +163,8 @@ void audioDHandle(void * buffer, int32u_t length)
 			adpcm_decoder( &buffer[sizeof(struct PacketHead)], adpbuffer, (length-sizeof(struct PacketHead))*2, &state );
 			mymemcpy( &musicdatafile[indexfile], adpbuffer, (length-sizeof(struct PacketHead))*4 );
 			indexfile += (length-sizeof(struct PacketHead))*4;
-			
-			/*int justp=0;
-			for(justp=0; justp<indexfile; justp++)
-			{
-				printf("%x, ", musicdatafile[justp] );
-			}*/
-
-			//received a complete file , so play it out.
+	
+			/*received a complete file , so play it out.*/
 			playwav16m( musicdatafile, FILELEN*2 );
 		}
 		else 

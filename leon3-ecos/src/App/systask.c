@@ -4,6 +4,7 @@
  * Author: xiaoyang
  * Created: 2011-9-22
  * Parameters:
+ * Return:
  * Description:ecos thread for controlling
  */
 void systsk_handle(cyg_addrword_t data){
