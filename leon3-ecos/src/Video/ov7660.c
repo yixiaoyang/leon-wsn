@@ -340,9 +340,8 @@ int8u_t read_OV7660_reg(int8u_t reg_addr, int8u_t *reg_ptr) {
 }
 
 /*
- *
- *
- *
+ * write configuration setting to OV7660,including the start location and height/width
+ * of camera
  */
 void OV7660_conf_window(int16u_t startx, int16u_t starty, int16u_t width,
 		int16u_t height) {
@@ -352,7 +351,7 @@ void OV7660_conf_window(int16u_t startx, int16u_t starty, int16u_t width,
 	endx = (startx + width);
 	endy = (starty + height + height);
 
-	// 水平像素设置
+	//horizontal pixel setting 
 	read_OV7660_reg(0x32, &reg_temp);
 	reg_temp = (int8u_t) ((reg_temp & 0xc0) | ((endx & 0x7) << 3) | (startx
 			& 0x7));
@@ -361,7 +360,7 @@ void OV7660_conf_window(int16u_t startx, int16u_t starty, int16u_t width,
 	write_OV7660_reg(0x17, (int8u_t) (startx >> 3));
 	write_OV7660_reg(0x18, (int8u_t) (endx >> 3));
 
-	// 垂直像素设置
+	// Vertical pixel setting
 	read_OV7660_reg(0x03, &reg_temp);
 	reg_temp = (int8u_t) ((reg_temp & 0xf0) | ((endy & 0x3) << 2) | (starty
 			& 0x3));
@@ -370,14 +369,15 @@ void OV7660_conf_window(int16u_t startx, int16u_t starty, int16u_t width,
 	write_OV7660_reg(0x19, (int8u_t) (starty >> 2));
 	write_OV7660_reg(0x1a, (int8u_t) (endy >> 2));
 }
-
-//(140,16,640,480) is good for VGA
-//(272,16,320,240) is good for QVGA
-/* config_OV7660_window */
+/*
+ * (140,16,640,480) is good for VGA
+ * (272,16,320,240) is good for QVGA
+ * config_OV7660_window 
+ */
 void OV7660_config_window(int32u_t startx,int32u_t starty,int32u_t width, int32u_t height)
 {
 	int32u_t endx=(startx+width);
-	int32u_t endy=(starty+height*2);// "v*2"必须
+	int32u_t endy=(starty+height*2);// Warning:"v*2" 
 	int8u_t temp_reg1, temp_reg2;
 	int8u_t state,temp;
 
@@ -493,7 +493,6 @@ int8u_t OV7660_init(void) {
 extern int8u_t pix_buf[OV7670_COL_SIZE * OV7670_ROW_SIZE * 2];
 //---------------------------------------------------------------
 void OV7660_work() {
-	/*每帧行数次数记录*/
 	int32u_t data_cnt;
 	/*pixel data index*/
 	int32u_t pix_idx;
@@ -585,7 +584,7 @@ void OV7660_work() {
 		}
 	}
 
-	/*写入最后一帧数据，长度可能小于512*/
+	/*write the last section data,maybe less than 512 bytes*/
 	rc = f_write(&fd, file_data + count, data_size - count, &result);
 	count += result;
 	if (rc || result < len) {
@@ -619,7 +618,8 @@ void ov7660_pin_test() {
 	gpio_make_in(PORTB, OV7660_VSYNC);
 	gpio_make_in(PORTB, OV7660_HREF);
 	gpio_make_out(PORTE, OV7660_XCLK_EN);
-
+	
+	/*enable clk vin*/
 	XCLK_EN();
 	dprintf("read PORTA,PCLK,VSYNC,HREF:%4x,%4x,%4x,%4x\n",
 			gpio_read_group(PORTA), PCLK_PIN_RD(), SYNC_PIN_RD(),

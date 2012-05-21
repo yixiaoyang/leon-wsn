@@ -46,18 +46,17 @@ void sd_init() {
 //------------------------------------------------------------------------
 unsigned char Write_Command_MMC(unsigned char cmd, unsigned long arg) {
 	unsigned char tmp;
-	unsigned char retry = 0; //�ظ���������
-
+	unsigned char retry = 0;
 	//SPI3_DESELECT();		//set MMC_Chip_Select to high (MMC/SD-Card disable)
 	spi2_8TxRx(0xFF); //send 8 Clock Impulse
 	//SPI3_SELECT(); 		//set MMC_Chip_Select to low (MMC/SD-Card active)
 
-	spi2_8TxRx(cmd | 0x40); //�ֱ�д������
-	spi2_8TxRx(arg >> 24); //��ݶε�4�ֽ�
-	spi2_8TxRx(arg >> 16); //��ݶε�3�ֽ�
-	spi2_8TxRx(arg >> 8); //��ݶε�2�ֽ�
-	spi2_8TxRx(arg); //��ݶε�1�ֽ�
-	spi2_8TxRx(0x95); //CRCЧ���
+	spi2_8TxRx(cmd | 0x40); //write commamd
+	spi2_8TxRx(arg >> 24); //data[24-31]
+	spi2_8TxRx(arg >> 16); //data[16-23]
+	spi2_8TxRx(arg >> 8); //data[16-21]
+	spi2_8TxRx(arg); //data[0-7]
+	spi2_8TxRx(0x95); //CRC Check
 
 	//get 16 bit response
 	spi2_8TxRx(0xff); //read the first byte,ignore it.

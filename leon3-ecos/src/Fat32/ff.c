@@ -91,7 +91,10 @@
 / Sep 06,'11 R0.09  f_mkfs() supports multiple partition to finish the multiple partition feature.
 /                   Added f_fdisk(). (_MULTI_PARTITION = 2)
 /---------------------------------------------------------------------------*/
-
+/*
+ * xiaoyang modified @2012-5-21
+ *
+ */
 #include "ff.h"			/* FatFs configurations and declarations */
 #include "diskio.h"		/* Declarations of low level disk I/O functions */
 
