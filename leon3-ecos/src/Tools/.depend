@@ -1,0 +1,3 @@
+tools.o: tools.c \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/types.h

@@ -2,10 +2,10 @@
 
 
 void thread_misc(cyg_addrword_t data) {
-	// uart test
-	led_off(LEDG0);
-
 	while(1){
+		led_off(LEDG0);
+		cyg_thread_delay(400);
+		led_on(LEDG0);
 		cyg_thread_delay(400);
 	}
 
