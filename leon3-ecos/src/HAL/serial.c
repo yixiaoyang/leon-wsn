@@ -38,7 +38,6 @@
 #include <cyg/hal/hal_arch.h>           /* CYGNUM_HAL_STACK_SIZE_TYPICAL */
 #include <cyg/io/serialio.h>
 
-
 /*
  * FUNCTIONS:serial testing
  * xiaoyang@2012-1-2

@@ -1,7 +1,7 @@
 #include "intr.h"
 
 /*
- * FUNCTIONS:serial testing
+ * FUNCTIONS:interrupt testing
  * xiaoyang@2012-5-11
  */
 static cyg_uint32 
@@ -22,8 +22,8 @@ vtask_dsr(cyg_vector_t vector, cyg_ucount32 count,cyg_addrword_t data){
 	/*release intr mask*/
 	cyg_interrupt_unmask(priv_data);
 }
-
-void vtask(cyg_addrword_t data)
+/*config and attach interrupt*/
+void int_vtask(cyg_addrword_t data)
 {
 	int priv_data = (int) data;
 	cyg_interrupt intr;
