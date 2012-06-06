@@ -4080,8 +4080,8 @@ int f_printf (
 #endif /* _USE_STRFUNC */
 /*
  *
- *  xiaoyang add
- *
+ * xiaoyang add for FATFS working on SD Card module
+ * 2011-12-20
  */
 
 void put_rc(FRESULT rc) {
@@ -4099,7 +4099,10 @@ void put_rc(FRESULT rc) {
 	}
 	printf("rc=%u FR_%s\n", (UINT) rc, p);
 }
-
+/*
+ * FATFS Read/Write Testing
+ * 2012-5-21
+ */
 void fs_test() {
 	FATFS myfs;
 	FATFS *fs = &myfs;

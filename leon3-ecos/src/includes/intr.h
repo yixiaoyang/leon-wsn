@@ -33,5 +33,6 @@
 #include <cyg/hal/hal_arch.h>           /* CYGNUM_HAL_STACK_SIZE_TYPICAL */
 #include <cyg/hal/hal_intr.h>
 
-void vtask(cyg_addrword_t data);
+void int_vtask(cyg_addrword_t data);
+
 #endif

@@ -1,6 +1,6 @@
 
 LIB	= fat32.a
-COBJS	=FAT32.o ff.o
+COBJS	=ff.o
 
 all:	$(LIB)
 $(LIB):	$(COBJS)
