@@ -1,0 +1,165 @@
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include application.c vtask.c systask.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include adpcm.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include netif.c translate.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include tools.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include rf.c uz2400d.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include ov7660.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include ff.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include data.c led.c sd.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include audio.c VS1003x.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+sparc-elf-gcc -M -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include spi.c gpio.c apbuart.c serial.c sccb.c i2cmst.c ck_gen.c intr.c > .depend
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+make[1]: “.depend”是最新的。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o application.o application.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o vtask.o vtask.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o systask.o systask.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o application.a application.o vtask.o systask.o
+sparc-elf-ar crv application.a application.o vtask.o systask.o
+a - application.o
+a - vtask.o
+a - systask.o
+sparc-elf-ranlib application.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/App”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o adpcm.o adpcm.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o adpcm.a adpcm.o
+sparc-elf-ar crv adpcm.a adpcm.o
+a - adpcm.o
+sparc-elf-ranlib adpcm.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Adpcm”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o netif.o netif.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o translate.o translate.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o stack.a netif.o translate.o 
+sparc-elf-ar crv stack.a netif.o translate.o 
+a - netif.o
+a - translate.o
+sparc-elf-ranlib stack.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 对“all”无需做任何事。
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Stack”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o tools.o tools.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o tools.a tools.o
+sparc-elf-ar crv tools.a tools.o
+a - tools.o
+sparc-elf-ranlib tools.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Tools”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o rf.o rf.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o uz2400d.o uz2400d.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o wireless.a rf.o uz2400d.o
+sparc-elf-ar crv wireless.a rf.o uz2400d.o
+a - rf.o
+a - uz2400d.o
+sparc-elf-ranlib wireless.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Wireless”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o ov7660.o ov7660.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o video.a ov7660.o
+sparc-elf-ar crv video.a ov7660.o
+a - ov7660.o
+sparc-elf-ranlib video.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Video”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o ff.o ff.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o fat32.a ff.o
+sparc-elf-ar crv fat32.a ff.o
+a - ff.o
+sparc-elf-ranlib fat32.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Fat32”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o data.o data.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o led.o led.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o sd.o sd.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o bsp.a data.o led.o sd.o
+sparc-elf-ar crv bsp.a data.o led.o sd.o
+a - data.o
+a - led.o
+a - sd.o
+sparc-elf-ranlib bsp.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/BSP”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o audio.o audio.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o VS1003x.o VS1003x.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o misc.a audio.o VS1003x.o
+sparc-elf-ar crv misc.a audio.o VS1003x.o
+a - audio.o
+a - VS1003x.o
+sparc-elf-ranlib misc.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/Misc”
+make[1]: 进入目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o spi.o spi.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o gpio.o gpio.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o apbuart.o apbuart.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o serial.o serial.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o sccb.o sccb.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o i2cmst.o i2cmst.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o ck_gen.o ck_gen.c
+sparc-elf-gcc -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include   -c -o intr.o intr.c
+#sparc-elf-gcc -msoft-float -g -nostdlib -fvtable-gc -Wl,--gc-sections -Wl,-static -nostartfiles -L/opt/cvs/ecos/ecos-3.0/spi_test_install/lib -Ttarget.ld -r -o hal.a spi.o gpio.o apbuart.o serial.o sccb.o i2cmst.o ck_gen.o intr.o
+sparc-elf-ar crv hal.a spi.o gpio.o apbuart.o serial.o sccb.o i2cmst.o ck_gen.o intr.o
+a - spi.o
+a - gpio.o
+a - apbuart.o
+a - serial.o
+a - sccb.o
+a - i2cmst.o
+a - ck_gen.o
+a - intr.o
+sparc-elf-ranlib hal.a
+make[1]: 离开目录“/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/HAL”
+sparc-elf-gcc -c -msoft-float -Wall -Wpointer-arith -Wstrict-prototypes -Winline -Wundef -Woverloaded-virtual -g -O2 -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -fvtable-gc  -I/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes  -I/opt/cvs/ecos/ecos-3.0/spi_test_install/include lemon.c -o lemon.o

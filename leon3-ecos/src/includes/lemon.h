@@ -13,9 +13,6 @@
 /**/
 #define DEV_TYPE_TX	0
 
-#define NTHREADS		2
-#define STACKSIZE		20480
-
 extern int8u_t txbuf[];			/* In monitor.h */
 extern int8u_t rxbuf[];
 

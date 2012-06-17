@@ -7,10 +7,10 @@
 
 #define CHANGE_REG_NUM 320
 
-#define OV7660_PCLK		1<<1 	//PORTB[1]==>IO_B[9]
-#define OV7660_VSYNC		1<<6	//PORTB[6]==>IO_B[14]
-#define OV7660_HREF		1<<7	//PORTB[7]==>IO_B[15]
-#define OV7660_XCLK_EN	1<<0	//PORTE[0]:xclk高使能，低禁用
+//#define OV7660_PCLK		1<<1 	//PORTB[1]==>IO_B[9]
+//#define OV7660_VSYNC	1<<6	//PORTB[6]==>IO_B[14]
+//#define OV7660_HREF		1<<7	//PORTB[7]==>IO_B[15]
+//#define OV7660_XCLK_EN	1<<0	//PORTE[0]:xclk高使能，低禁用
 ///////////////////////////////////////////////////////////////////////
 
 // OV7660操作指令
@@ -25,8 +25,8 @@
 #define PCLK_PIN_RD()        gpio_read(PORTB,OV7660_PCLK)
 
 // XCLK时钟使能,PORTE[0]==>IO_A[0]
-#define XCLK_EN()            gpio_set(PORTE,0)
-#define XCLK_DIS()           gpio_clr(PORTE,0)
+#define XCLK_EN()            ck_enable(CTR_VIN)
+#define XCLK_DIS()           ck_disable(CTR_VIN);	
 
 #define 	OV7670_ROW_SIZE		320//行数
 #define 	OV7670_COL_SIZE		240//列数

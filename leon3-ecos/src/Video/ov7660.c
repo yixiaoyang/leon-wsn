@@ -24,7 +24,7 @@ const int8u_t reg_conf[][2] =
 	//{ 0x0C , 0x42 },//COM3 0x42=MSB LSB swap
 	{ 0x0F , 0xcB },//COM6
 
-	{ 0x11 , 0x2f },//CLKRC  24/(7+1) PCLK
+	{ 0x11 , 0x2f },//CLKRC  24/48 = 0.5 MHZ PCLK
 	{ 0x12 , 0x14 }, //COM7  QVGA RGB
 	{ 0x13 , 0x8F }, //COM8
 	{ 0x14 , 0x7a },//COM9
@@ -43,7 +43,8 @@ const int8u_t reg_conf[][2] =
 	{ 0x20 , 0xff } ,//COM7  QVGA RGB
 
 	{0x70, 0x00},//00
-	{0x71, 0x80}//0x85≤‚ ‘
+	//{0x71, 0x80}//0x85≤‚ ‘
+	{0x71, 0x00}
 };
 
 /*2012-2-18≤‚ ‘±‡∫≈2,Õıπ„∏£µƒ*/
@@ -248,10 +249,10 @@ const int8u_t reg_conf2[][2] =
     {0x6e, 0x4b},
     {0x6f, 0x60},
 
-    //{0x70, 0x70},
-    //{0x71, 0x70},
-    {0x70, 0x00},
-    {0x71, 0x80},
+    {0x70, 0x70},
+    {0x71, 0x70},
+    //{0x70, 0x00},
+    //{0x71, 0x80},
 /*
     {0x72, 0x70},
     {0x73, 0x70},
@@ -425,12 +426,10 @@ int8u_t OV7660_init(void) {
 	 */
 	gpio_make_out(PORTB, SCCB_CLK);
 	gpio_make_out(PORTB, SCCB_DATA);
-	gpio_make_in(PORTA, 0xff);
-	gpio_make_in(PORTB, OV7660_PCLK);
-	gpio_make_in(PORTB, OV7660_VSYNC);
-	gpio_make_in(PORTB, OV7660_HREF);
-	gpio_make_out(PORTE, OV7660_XCLK_EN);
-
+	//gpio_make_in(PORTB, OV7660_PCLK);
+	//gpio_make_in(PORTB, OV7660_VSYNC);
+	//gpio_make_in(PORTB, OV7660_HREF);
+	
 	/*clk in*/
 	XCLK_EN();
 	delayus(10);
@@ -442,7 +441,7 @@ int8u_t OV7660_init(void) {
 	delayus(10);
 
 	/*PID check*/
-	dprintf("-----------------------------------\n");
+	dprintf("\nov7660 init begin!\n-----------------------------------\n");
 	for (i = 0; i < 1; i++) {
 		pid = 0;
 		if (FAIL == read_OV7660_reg(0x0a, &pid)) {
@@ -476,7 +475,7 @@ int8u_t OV7660_init(void) {
 	dprintf("write %d regs ok!\n",i);
 	dprintf("read regs testing...\n");
 	dprintf("-----------------------------------\n");
-	regs_cnt = sizeof(reg_conf) / sizeof(reg_conf[0]);
+	/*regs_cnt = sizeof(reg_conf) / sizeof(reg_conf[0]);
 	for (i = 0; i < regs_cnt; i++) {
 		ver = 0;
 		if (FAIL == read_OV7660_reg(reg_conf[i][0], &ver)) {
@@ -484,8 +483,8 @@ int8u_t OV7660_init(void) {
 		} else {
 			dprintf("REG[%4x](%4x)=%4x\n",reg_conf[i][0], reg_conf[i][1] ,ver);
 		}
-	}
-	dprintf("-----------------------------------\n");
+	}*/
+	dprintf("-----------------------------------\nov7660 init over!\n");
 }
 
 //---------------------------------------------------------------
@@ -523,38 +522,11 @@ void OV7660_work() {
 	printf("\n");
 
 	/*loop for capture a frame*/
-	{
-		dprintf("Capture image...\n");
-		while (1== SYNC_PIN_RD())
-			;
-		while (0== SYNC_PIN_RD())
-			;
-		led_on(LEDG1);
-
-		pos = pix_buf;
-		/*scan evey line*/
-		for (data_cnt = 0; data_cnt < OV7670_COL_SIZE; data_cnt++) {
-			/*wait for HREF low-high signal transition*/
-			while (0 == HREF_PIN_RD())
-				;
-			/*get a line*/
-			for (j = 0; j < cols; j++) {
-				while (0 == PCLK_PIN_RD())
-					;
-				pos[j] = gpio_read_group(PORTA);
-				while (1 == PCLK_PIN_RD())
-					;
-			}
-			pos = pos + cols;
-			while (1 == HREF_PIN_RD())
-				;
-		}
-	}
-
-	led_off(LEDG1);
+	
+	dprintf("Capture image over...\n");
 
 	/*write data*/
-	dprintf("Capture image over,saving file...\n");
+	dprintf("Saving file...\n");
 	/*mount fs*/
 	rc = f_mount(0, fs);
 	put_rc(rc);
@@ -611,6 +583,7 @@ void ov7660_pin_test() {
 	 * VSYNC:in
 	 * HREF:in
 	 */
+	/*	
 	gpio_make_out(PORTB, SCCB_CLK);
 	gpio_make_out(PORTB, SCCB_DATA);
 	gpio_make_in(PORTA, 0xff);
@@ -618,10 +591,11 @@ void ov7660_pin_test() {
 	gpio_make_in(PORTB, OV7660_VSYNC);
 	gpio_make_in(PORTB, OV7660_HREF);
 	gpio_make_out(PORTE, OV7660_XCLK_EN);
-	
+	*/
 	/*enable clk vin*/
-	XCLK_EN();
-	dprintf("read PORTA,PCLK,VSYNC,HREF:%4x,%4x,%4x,%4x\n",
+	/*XCLK_EN();
+	dprintf("read PORTA,PCLK,VSYNC,HREF,SPI2_MISO(GPIO_12):%4x,%4x,%4x,%4x,%4x\n",
 			gpio_read_group(PORTA), PCLK_PIN_RD(), SYNC_PIN_RD(),
-			HREF_PIN_RD());
+			HREF_PIN_RD(),READMISO());
+	*/
 }

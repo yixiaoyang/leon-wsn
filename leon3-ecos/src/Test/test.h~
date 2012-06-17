@@ -1,0 +1,11 @@
+#ifndef __TEST_H__
+#define __TEST_H__
+
+int test_gpio(void);
+
+int test_rf_tx(char* tx_buf,unsigned int tx_len);
+void test_rf_rx(char rx_buf,unsigned int rx_len);
+int test_i2cmst(void);
+void hellospi(void);
+
+#endif // TEST_H

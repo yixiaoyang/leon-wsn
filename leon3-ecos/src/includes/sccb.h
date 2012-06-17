@@ -8,7 +8,7 @@
 //#define SCCB_PIN		PINC
 
 
-#define SCCB_CLK	1 << 0	//GPIO[8],PORTB[0]
+#define SCCB_CLK	1 << 1	//GPIO[9],PORTB[1]
 #define SCCB_DATA	1 << 2	//GPIO[10],PORTB[2]
 
 //#define SCCB_CLK	1<<7

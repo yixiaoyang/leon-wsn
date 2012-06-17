@@ -41,3 +41,4 @@ void ck_vin_div(unsigned short div_val)
 {
 	REG32(CK_GEN_BASE+CG_VGACLK) = div_val;
 }
+

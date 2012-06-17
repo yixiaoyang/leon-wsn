@@ -1,6 +1,6 @@
 
 LIB	= wireless.a
-COBJS	=rf.o uz2400d.o
+COBJS	=rf.o uz2400d.o trans.o
 
 all:	$(LIB)
 $(LIB):	$(COBJS)

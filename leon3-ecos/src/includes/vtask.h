@@ -5,5 +5,6 @@
 
 
 void vtsk_handle(cyg_addrword_t data);
+void vtsk_func(cyg_addrword_t data);
 
 #endif

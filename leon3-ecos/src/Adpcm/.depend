@@ -1,0 +1,25 @@
+adpcm.o: adpcm.c \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/adpcm.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/stdio.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/pkgconf/isoinfra.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/stddef.h \
+  /opt/soft/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/stddef.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/stdarg.h \
+  /opt/soft/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/stdarg.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/libc/stdio/stdio.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/pkgconf/libc_stdio.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/infra/cyg_type.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/hal/basetype.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/libc/stdio/stdio.inl \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/errno.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/error/codes.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/pkgconf/error.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/error/errno.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/string.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/error/strerror.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/libc/string/string.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/pkgconf/libc_string.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/libc/string/string.inl \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/cyg/libc/string/bsdstring.h \
+  /opt/cvs/ecos/ecos-3.0/spi_test_install/include/limits.h \
+  /opt/soft/sparc-elf-3.4.4/bin/../lib/gcc/sparc-elf/3.4.4/include/limits.h

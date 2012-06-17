@@ -1,0 +1,4 @@
+ff.o: ff.c /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/integer.h \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ffconf.h \
+  /opt/git-hub/leon3-wsn-all/leon3-ecos/src/includes/diskio.h

@@ -7,6 +7,7 @@
 #include "spi.h"
 #include "ck_gen.h"
 
+
 void delay(unsigned long ms)
 {
 	unsigned long i;
@@ -51,7 +52,6 @@ void test_i2s(void)
 	}
 	//ck_disable(CTR_DLR|CTR_AIN);
 }
-
 int ain_record()
 {
 #define NSAMPLES 109715

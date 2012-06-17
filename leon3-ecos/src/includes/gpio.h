@@ -1,10 +1,18 @@
 /*
  * gpio.h
  *
- *  Created on: 2011-2-22
+ *  Created on: 2012-6-11
  *      Author: water
+ *	Description:
+ *		GPIO own 2 aux mode. for register Aux[0-15],
+ *			Aux bits[0-7] 	=> Aux0 in HW
+ *			Aux bits[8-15] 	=> Aux1 in HW
+ *		
+ *		pio[42]	=>	ikey3
+ *		pio_in[39] => tRIGGER
+ *		Aux set 1 to Enable the function 
+ *		Default using GPIO mode
  */
-
 #ifndef GPIO_H_
 #define GPIO_H_
 
@@ -20,7 +28,7 @@
  #define GPIO_BY			0x18
  #define GPIO_MAP		0x20
  */
- 
+
 //-------------------------------------------------------------
 // gpio driver for OPDK2
 // xiaoyang yi @2011.11.9

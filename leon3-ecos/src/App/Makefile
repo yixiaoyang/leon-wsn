@@ -1,6 +1,6 @@
 
 LIB	= application.a
-COBJS	= application.o vtask.o systask.o
+COBJS	= application.o vtask.o systask.o atask.o
 
 all:	$(LIB)
 

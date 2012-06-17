@@ -7,6 +7,7 @@
 
 # Usage:   make INSTALL_DIR=/path/to/ecos/install
 INSTALL_DIR=/opt/cvs/ecos/ecos-3.0/spi_test_install
+#INSTALL_DIR=./spi_test_install
 
 # Cross compilers
 SPARC_PREFIX=sparc-elf-

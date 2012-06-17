@@ -5,7 +5,8 @@
  *      Author: xiaoyang
  */
 
-#include "tools.h"
+//#include "tools.h"
+#include "includes.h"
 
 /*
  * Author: xiaoyang
@@ -13,6 +14,7 @@
  * Parameters:
  * Description:printf with cyg_mutex_lock() protection
  */
+static cyg_mutex_t cliblock;
 void _dprintf_(const char *format, ...) {
 #if _DEBUG_
 	va_list arg;
@@ -20,7 +22,7 @@ void _dprintf_(const char *format, ...) {
 	va_start(arg, format);
 	vsprintf(tmp, format, arg);
 	va_end(arg);
-	/* note: printf() must be protected by a call to cyg_mutex_lock() */
+	// note: printf() must be protected by a call to cyg_mutex_lock() 
 	cyg_mutex_lock(&cliblock);
 	{
 		printf("%s", tmp);
@@ -66,7 +68,7 @@ void testing() {
 	char data[3][4];
 	char* ptr = &(data[0][0]);
 
-	printf("-----------------------------------\n");
+	_dprintf_("-----------------------------------\n");
 	for (i = 0; i < 3; i++) {
 		for (j = 0; j < 4; j++) {
 			data[i][j] = count++;
@@ -76,7 +78,7 @@ void testing() {
 	for (i = 0; i < 12; i++) {
 		printf("%d ", ptr[i]);
 	}
-	printf("\n-----------------------------------\n");
+	_dprintf_("\n-----------------------------------\n");
 	return ;
 
 }

@@ -15,7 +15,7 @@
 
 #define NTHREADS		2
 #define STACKSIZE		20480
-
+#define  CTRLSTKSIZE	20480
 extern int8u_t txbuf[];			/* In monitor.h */
 extern int8u_t rxbuf[];
 
@@ -34,12 +34,10 @@ extern int8u_t rxbuf[];
 #define EADR_5		0x16
 #define EADR_6		0x17
 #define EADR_7		0x18
-
 #define SADRL		0x11
 #define SADRH		0x11
 
 #else
-
 #define EADR_0		0x21
 #define EADR_1		0x22
 #define EADR_2		0x23
@@ -48,10 +46,13 @@ extern int8u_t rxbuf[];
 #define EADR_5		0x26
 #define EADR_6		0x27
 #define EADR_7		0x28
-
 #define SADRL		0x22
 #define SADRH		0x22
-
 #endif // DEV_TYPE_TX
+
+/*for app*/
+#define DEV_MISC	0
+#define DEV_VIDEO	1
+#define DEV_ROUTER	0
 
 #endif /* LEMON_H_ */

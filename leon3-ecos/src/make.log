@@ -1,0 +1,513 @@
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:33,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:39,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:15: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:43,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/uart.h:36: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:6,
+                 from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:69: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:70: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:48,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:69: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:49,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/FAT32.h:139: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:50,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:53,
+                 from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+In file included from translate.c:6:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:6: warning: "PRINTF_DEBUG_MSG" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:26: warning: "NU_TRUE" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:7: warning: "C99_SUPPORT" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:22: warning: "NU_TRUE" is not defined
+translate.c: In function `sendPacket':
+translate.c:121: warning: pointer of type `void *' used in arithmetic
+translate.c:121: warning: dereferencing `void *' pointer
+translate.c:134: warning: pointer of type `void *' used in arithmetic
+translate.c:134: warning: dereferencing `void *' pointer
+translate.c:95: warning: unused variable `forts'
+translate.c: In function `f_insert':
+translate.c:152: warning: pointer of type `void *' used in arithmetic
+translate.c:152: warning: dereferencing `void *' pointer
+translate.c:168: warning: pointer of type `void *' used in arithmetic
+translate.c:168: warning: dereferencing `void *' pointer
+translate.c:185: warning: pointer of type `void *' used in arithmetic
+translate.c:185: warning: dereferencing `void *' pointer
+translate.c: In function `dsr_network':
+translate.c:208: warning: unused variable `aa'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from tools.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:15: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:16: warning: function declaration isn't a prototype
+tools.c:17:5: warning: "_DEBUG_" is not defined
+tools.c:52: warning: function declaration isn't a prototype
+tools.c:61: warning: function declaration isn't a prototype
+tools.c: In function `testing':
+tools.c:69: warning: implicit declaration of function `printf'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:33,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:39,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:15: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:43,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/uart.h:36: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:6,
+                 from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:69: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:70: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:48,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:69: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:49,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/FAT32.h:139: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:50,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:53,
+                 from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+In file included from rf.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:6: warning: "PRINTF_DEBUG_MSG" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:26: warning: "NU_TRUE" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:7: warning: "C99_SUPPORT" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:22: warning: "NU_TRUE" is not defined
+rf.c: In function `test_rf_tx':
+rf.c:416: warning: implicit declaration of function `ain_init'
+rf.c:421: warning: implicit declaration of function `mac_send'
+rf.c:433: warning: implicit declaration of function `delay'
+rf.c:402: warning: unused variable `str'
+rf.c:403: warning: unused variable `test_data'
+rf.c:405: warning: unused variable `i'
+rf.c:413: warning: unused variable `fifo32'
+rf.c: In function `test_rf_rx':
+rf.c:476: warning: implicit declaration of function `mac_recv'
+rf.c:501: warning: implicit declaration of function `dac_fifo_full'
+rf.c:502: warning: implicit declaration of function `dac_fifo_write32'
+rf.c:449: warning: unused variable `rxbuf'
+rf.c:452: warning: unused variable `i'
+rf.c:468: warning: unused variable `sample32'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:4,
+                 from ov7660.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:6,
+                 from ov7660.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+In file included from ov7660.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:69: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:70: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:39,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:15: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:43,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/uart.h:36: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:48,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:69: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:49,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/FAT32.h:139: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:50,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:53,
+                 from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+In file included from ov7660.c:4:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:6: warning: "PRINTF_DEBUG_MSG" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:26: warning: "NU_TRUE" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:7: warning: "C99_SUPPORT" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:22: warning: "NU_TRUE" is not defined
+ov7660.c: In function `OV7660_init':
+ov7660.c:439: warning: comparison is always false due to limited range of data type
+ov7660.c:448: warning: comparison is always false due to limited range of data type
+ov7660.c:457: warning: comparison is always false due to limited range of data type
+ov7660.c:468: warning: comparison is always false due to limited range of data type
+ov7660.c:482: warning: comparison is always false due to limited range of data type
+ov7660.c:413: warning: unused variable `time'
+ov7660.c: At top level:
+ov7660.c:495: warning: function declaration isn't a prototype
+ov7660.c: In function `OV7660_work':
+ov7660.c:521: warning: implicit declaration of function `gpio_read_group'
+ov7660.c:564: warning: passing arg 1 of `f_open' from incompatible pointer type
+ov7660.c:576: warning: passing arg 1 of `f_write' from incompatible pointer type
+ov7660.c:588: warning: passing arg 1 of `f_write' from incompatible pointer type
+ov7660.c:599: warning: passing arg 1 of `f_close' from incompatible pointer type
+ov7660.c:601: warning: `return' with a value, in function returning void
+ov7660.c:498: warning: unused variable `pix_idx'
+ov7660.c: At top level:
+ov7660.c:604: warning: function declaration isn't a prototype
+ov7660.c: In function `OV7660_init':
+ov7660.c:489: warning: control reaches end of non-void function
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from ff.c:98:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+ff.c: In function `put_rc':
+ff.c:4100: warning: implicit declaration of function `printf'
+ff.c: At top level:
+ff.c:4106: warning: function declaration isn't a prototype
+ff.c: In function `fs_test':
+ff.c:4139: warning: passing arg 1 of `printf' makes pointer from integer without a cast
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from led.c:8:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+In file included from led.c:9:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+led.c:11: warning: function declaration isn't a prototype
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:5,
+                 from sd.c:9:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from sd.c:9:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:69: warning: function declaration isn't a prototype
+In file included from sd.c:10:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+sd.c:35: warning: function declaration isn't a prototype
+sd.c:80: warning: function declaration isn't a prototype
+sd.c:528: warning: function declaration isn't a prototype
+sd.c:551: warning: function declaration isn't a prototype
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from audio.c:9:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/audio.h:69: warning: function declaration isn't a prototype
+In file included from audio.c:12:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from audio.c:13:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+audio.c: In function `ain_init':
+audio.c:20: warning: implicit declaration of function `printf'
+audio.c:40: warning: implicit declaration of function `gpio_get_port'
+audio.c:40: warning: initialization makes pointer from integer without a cast
+audio.c:107: warning: implicit declaration of function `gpio_select0'
+audio.c: At top level:
+audio.c:145: warning: function declaration isn't a prototype
+audio.c:156: warning: function declaration isn't a prototype
+audio.c: In function `ain_record':
+audio.c:164: warning: implicit declaration of function `RF_CHIP_INITIALIZE'
+audio.c:179: warning: implicit declaration of function `mac_send'
+audio.c:183: warning: implicit declaration of function `delay'
+audio.c: In function `ain_playback':
+audio.c:199: warning: unused variable `dst_addr'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from VS1003x.c:3:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+VS1003x.c: In function `Vs1003_Test':
+VS1003x.c:306: warning: passing arg 1 of `Vs1003_DATA_Write8' from incompatible pointer type
+VS1003x.c: At top level:
+VS1003x.c:27: warning: 'count' defined but not used
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from spi.c:10:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+spi.c: In function `spi_wbuf':
+spi.c:62: warning: dereferencing type-punned pointer will break strict-aliasing rules
+spi.c: In function `spi_wbyte':
+spi.c:48: warning: control reaches end of non-void function
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from gpio.c:10:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+gpio.c:95: warning: function declaration isn't a prototype
+gpio.c: In function `gpio_test':
+gpio.c:97: warning: implicit declaration of function `printf'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from apbuart.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/uart.h:36: warning: function declaration isn't a prototype
+In file included from apbuart.c:2:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+apbuart.c: In function `fail':
+apbuart.c:5: warning: implicit declaration of function `printf'
+apbuart.c: In function `apbuart_test':
+apbuart.c:44: warning: unsigned int format, long unsigned int arg (arg 2)
+apbuart.c:46: warning: unsigned int format, long unsigned int arg (arg 2)
+apbuart.c:31: warning: unused variable `temp'
+apbuart.c:33: warning: unused variable `fifosize'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+serial.c:46: warning: function declaration isn't a prototype
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sccb.h:4,
+                 from sccb.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from i2cmst.c:7:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+In file included from i2cmst.c:9:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/audio.h:69: warning: function declaration isn't a prototype
+i2cmst.c:15: warning: function declaration isn't a prototype
+i2cmst.c: In function `i2c_init':
+i2cmst.c:17: warning: implicit declaration of function `dprintf'
+i2cmst.c:20: warning: implicit declaration of function `printf'
+i2cmst.c: In function `test_i2cmst':
+i2cmst.c:85: warning: implicit declaration of function `ck_disable'
+i2cmst.c:89: warning: passing arg 2 of `i2c_write' from incompatible pointer type
+i2cmst.c:98: warning: passing arg 2 of `i2c_write' from incompatible pointer type
+i2cmst.c:107: warning: passing arg 2 of `i2c_write' from incompatible pointer type
+i2cmst.c:113: warning: passing arg 2 of `i2c_write' from incompatible pointer type
+i2cmst.c:119: warning: passing arg 2 of `i2c_write' from incompatible pointer type
+i2cmst.c:123: warning: implicit declaration of function `ck_enable'
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+ck_gen.c:29: warning: function declaration isn't a prototype
+ck_gen.c:33: warning: function declaration isn't a prototype
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+ERROR: ld.so: object '/usr/lib64/freetype-infinality/libfreetype.so.6' from LD_PRELOAD cannot be preloaded: ignored.
+cc1: warning: command line option "-Woverloaded-virtual" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fno-rtti" is valid for C++/ObjC++ but not for C
+cc1: warning: command line option "-fvtable-gc" is valid for C++/ObjC++ but not for C
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:33,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/gpio.h:117: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:39,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:15: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/tools.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:43,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/uart.h:36: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:6,
+                 from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/led.h:16: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:45,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:69: warning: function declaration isn't a prototype
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ov7660.h:70: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:48,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/sd.h:69: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:49,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/FAT32.h:139: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:50,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/ff.h:339: warning: function declaration isn't a prototype
+In file included from /opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:53,
+                 from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/i2cmst.h:39: warning: function declaration isn't a prototype
+In file included from lemon.c:1:
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:6: warning: "PRINTF_DEBUG_MSG" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:88:26: warning: "NU_TRUE" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:7: warning: "C99_SUPPORT" is not defined
+/opt/git-hub/git-hub/leon3-wsn-all/leon3-ecos/src/includes/includes.h:89:22: warning: "NU_TRUE" is not defined
+lemon.c:28:2: invalid preprocessing directive #extern
+lemon.c: In function `main':
+lemon.c:81: warning: unused variable `i'
+make: *** [lemon.o] 错误 1
+xiaoyang@xiaoyang src$ 
+

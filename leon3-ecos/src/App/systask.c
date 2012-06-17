@@ -8,13 +8,25 @@
  * Description:ecos thread for controlling
  */
 void systsk_handle(cyg_addrword_t data){
-	//gpio_make_out(PORTB, 0xc0);//make io[14-15] as pout
+	dprintf("systask in...\n");
+	//OV7660_init();
+	vin_init();
+	cyg_thread_delay(10);
+	while(VIN_STAT_EMPTY){
+		dprintf("vin empty,stat=[%08x],cfg=[%08x]\n",REG32(VIN_BASE+VIN_STAT),REG32(VIN_BASE+VIN_CFG));
+		show_pix_data();
+		cyg_thread_delay(500);
+	}
+	
+	while(!VIN_STAT_FULL){
+		dprintf("vin not full,stat=[%08x]\n",REG32(VIN_BASE+VIN_STAT));
+		cyg_thread_delay(500);
+	}
+	//OV7660_work();
 	while (1) {
 		/*do your own work here*/
-		led_on(LEDG1);
-		cyg_thread_delay(50);
-		led_off(LEDG1);
-		cyg_thread_delay(50);
+		dprintf("sys task...\n");
+		cyg_thread_delay(500);
 		/*do your own work here*/
 	}
 }

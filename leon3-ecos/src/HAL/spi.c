@@ -207,7 +207,10 @@ void spi2_PmodCLS_init(void)
  
 void spi2_test(void)
 {
-    spi2_PmodCLS_init();
-    spi2_PmodCLS_SendString("hello,leon3!");
+	spi2_init();
+	gpio_clr( PORTB,SPI2_CLK );
+    gpio_clr( PORTB,SPI2_MOSI);
+    //spi2_PmodCLS_init();
+    //spi2_PmodCLS_SendString("hello,leon3!");
 }
  

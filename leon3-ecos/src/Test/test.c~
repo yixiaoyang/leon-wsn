@@ -1,0 +1,246 @@
+#include <stdio.h>
+#include "includes.h"
+
+void delay(unsigned long ms)
+{
+    unsigned long i;
+    while(ms--)
+    {
+        for(i=0; i<10000; i++);
+    }
+}
+void hellospi(void)
+{
+    unsigned char data_write[2][2] =
+    {
+        {((0x05<<1&0x7E)|0x01),0x55},
+        {(0x05<<1&0x7E), 0x00}
+    };
+    unsigned char rcv;
+    dprintf("Hello, world!\n");
+    spi_init();
+
+    SLV_SELECT();
+    spi_xmit8(data_write[0][0]);
+    spi_xmit8(data_write[0][1]);
+    SLV_DESELECT();
+//*
+    SLV_SELECT();
+    spi_xmit8(data_write[1][0]);
+    rcv = spi_xmit8(data_write[1][1]);
+    SLV_DESELECT();
+
+//*/
+    dprintf("Received %x\n",rcv);
+    return 0;
+}
+void test_i2s(void)
+{
+    int i = 20;
+
+    ain_master_enable(1);
+    ain_init();
+    //ck_enable(CTR_DLR|CTR_AIN);
+    for(; i; i--)
+    {
+        dac_fifo_write32(0x55555555);
+        dac_fifo_write32(0xaaaaaaaa);
+    }
+    //ck_disable(CTR_DLR|CTR_AIN);
+}
+
+int ain_record()
+{
+#define NSAMPLES 109715
+    unsigned long *ain_data_start = (unsigned long*)0x40100000;
+    unsigned long *ain_data_end = (unsigned long*)0x40200000; /* 0.5mins */
+    unsigned long *cur = (unsigned long*)ain_data_start;
+    //unsigned long cur = ain_data_start;
+    unsigned long fifo32;
+    ck_enable(CTR_AX|CTR_AIN|CTR_ALR);
+    RF_CHIP_INITIALIZE();
+    dprintf("Speaking:\n");
+    while(cur<ain_data_end)
+    {
+        fifo32 = adc_fifo_read32();
+        *cur++ = fifo32;
+        dac_fifo_write32(fifo32);
+        //cur+=4;
+    }
+    /* Sending */
+    unsigned short dst_addr = 0x2222;
+    unsigned long nsample;
+    unsigned char* pbuf = (unsigned char*)ain_data_start;
+    nsample = 0;
+    dprintf("Recording stops, start sending...\n");
+    while(nsample<NSAMPLES)
+    {
+        mac_send(pbuf, 100, (unsigned char*)&dst_addr, 1);
+ 
+        pbuf+=100;
+        nsample+=25;
+        delay(1);
+    }
+ 
+    dprintf("Stop record.\n");
+    return 0;
+}
+void ain_playback(unsigned long addr, unsigned long wdlen)
+{
+#define PLAY_ADDR 0x41100000
+//#define NSAMPLES 438858
+#define NSAMPLES 109715
+    /* Start play */
+    unsigned long *sample32 = addr ? (unsigned long*)addr : \
+                              (unsigned long*)PLAY_ADDR;
+    unsigned long NumSamples = wdlen ? wdlen : NSAMPLES;
+    ck_enable(CTR_AX|CTR_DLR|CTR_AIN);
+    unsigned short dst_addr = 0x2222;
+    RF_CHIP_INITIALIZE();
+    dprintf("Start play:\n");
+    while(NumSamples)
+    {
+        if(!dac_fifo_full())
+        {
+            dac_fifo_write32(*sample32);
+            /*
+            mac_send((unsigned char*)sample32,
+                        sizeof(*sample32), (unsigned char*)&dst_addr, 1);
+            */
+            NumSamples--;
+            sample32++;
+        }
+        else
+        {
+            //dprintf("DAC fifo full, delay.\n");
+            //delay(1);
+        }
+ 
+    }
+    //ck_disable(CTR_AX|CTR_DLR|CTR_AIN);
+    //dprintf();
+ 
+ 
+}
+int test_gpio(void)
+{
+    struct gpio_port* port_f = gpio_get_port(PORTF);
+    int i=10;
+    dprintf("Test gpio\n");
+    gpio_selectno(port_f, 0x08);
+    gpio_make_out(port_f, 0x08);
+    gpio_set(port_f, 0x08);
+    while(i--)
+    {
+        /*
+        gpio_set(port_f, 0x08);
+        delay(1000);
+        gpio_clr(port_f, 0x08);
+        delay(1000);
+        */
+        gpio_toggle(port_f, 0x08);
+        delay(1000);
+    }
+    return 0;
+}
+int test_rf_tx(char* tx_buf,unsigned int tx_len)
+{
+    int rc, i;
+    unsigned int count = 0;
+    
+    RF_CHIP_INITIALIZE();
+    /* Print network configuration */
+    netconfig();
+    
+    while(count < tx_len)
+    {
+        rc = mac_send(tx_buf,100, (unsigned char*)&dst_addr, 1);
+        pbuf+=100;
+        count+=25;
+        delay(1);
+    }
+    if(rc!=0){
+        dprintf("Sending string failed.\n");
+    }
+    else{
+        dprintf("String sent out.\n");
+    }
+    return 0;
+}
+ 
+ 
+void test_rf_rx(char rx_buf,int rx_len)
+{
+    unsigned char* rx_buf;
+    int len, i;
+    unsigned int count = 0;
+     
+    RF_CHIP_INITIALIZE();
+    netconfig();
+    
+    dprintf("Receiving...\n");
+    while(count < rx_len)
+    {
+        len = mac_recv(rx_buf);
+        rx_buf+=len;
+        count += len/4;
+        if(len!=-1)
+        {
+        }
+    }
+    dprintf("Rx done!\n");
+}
+
+int test_i2cmst(void)
+{
+    unsigned short data16;
+    int rc=0;
+    dprintf("Start I2C master test.\n");
+    ck_disable(3);
+    i2c_init();
+    /* Reset device */
+    data16 = CD_RST;
+    rc = i2c_write(SLVADDR, &data16, 2);
+    if(rc!=2)
+    {
+        dprintf("I2C write failed, returned %d.\n", rc);
+    }
+    /* Left & right line in mute */
+    //data16 = CD_LLI | LLI_LINMUTE | LLI_LRINBOTH;
+    //i2c_write(SLVADDR, &data16, 2);
+    /* Side tone mode of mic */
+    data16 = CD_AAPC|AAPC_SIDETONE;
+    rc = i2c_write(SLVADDR, &data16, 2);
+    if(rc!=2)
+    {
+        dprintf("I2C write failed, returned %d.\n", rc);
+    }
+    /* Set headphone output volume */
+    //data16 = CD_LHO|LHO_LRHPBOTH|0x7F;
+    //rc = i2c_write(SLVADDR, &data16, 2);
+    /* Power down line input, crystal oscillator, clock output */
+    data16 = CD_PDCT | PDCT_LINEINPD | PDCT_OSCPD ;//| PDCT_CLKOUTPD;
+    rc = i2c_write(SLVADDR, &data16, 2);
+    if(rc!=2)
+    {
+        dprintf("I2C write failed, returned %d.\n", rc);
+    }
+    /* Clock output divide by 2 */
+    data16 = CD_SCT|SCT_CLKODIV2;
+    rc = i2c_write(SLVADDR, &data16, 2);
+    if(rc!=2)
+    {
+        dprintf("I2C write failed, returned %d.\n", rc);
+    }
+    /* Activate codec device */
+    data16 = CD_ACT|ACT_EN;
+    rc = i2c_write(SLVADDR, &data16, 2);
+    if(rc!=2)
+    {
+        dprintf("I2C write failed, returned %d.\n", rc);
+    }
+    ck_enable(3);
+    dprintf("End I2C master test.\n");
+    return 0;
+}
+ 

@@ -23,4 +23,6 @@
 #define AIN_BASE		0x80000400
 #define CK_GEN_BASE 0x80000B00
 
+#define VIN_BASE	0x80000900
+
 #endif /* FPGA_H_ */

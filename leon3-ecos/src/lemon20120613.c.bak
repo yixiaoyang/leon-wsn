@@ -1,0 +1,185 @@
+#include "includes.h"
+#include "led.h"
+
+#include "systask.h"
+#include "vtask.h"
+#include "atask.h"
+/*task stack and handle*/
+/*systask*/
+#define SYSTSK_STK_SIZE	51200
+#define VTASK_STK_SIZE	51200 //204800
+static cyg_handle_t systsk_hdl;
+static cyg_thread systsk_thr;
+static char systsk_stack[SYSTSK_STK_SIZE];
+
+/*video task*/
+static cyg_handle_t vtsk_hdl;
+static cyg_thread vtsk_thr;
+static char vtsk_stack[VTASK_STK_SIZE];
+
+/*global parameters*/
+cyg_mutex_t cliblock;
+//int8u_t txbuf[128] = { 0 };
+//int8u_t rxbuf[144] = { 0 };
+
+/* for ov7670,RGB565 out, 240*320*2 */
+int8u_t pix_buf[OV7670_COL_SIZE*OV7670_ROW_SIZE*2];
+
+/*extern parameters*/
+extern const short music_data[FILELEN];
+
+
+/*
+ * Author: xiaoyang
+ * Created: 2011-9-22
+ * Parameters:
+ * Description:SW & HW init
+ */
+void system_init(void) {
+	dprintf("system init begin.\n");
+	/*gpio & aux init*/
+	//gpio_init(PORTA, 0x00ff);	//set io[0-7] as vin pins(aux0[0-7])
+	/*
+	assign aux0_in[ 0]=1'b0;          assign aux0_oen[ 0]=1'b1;         assign vin_data[ 0]=aux0_out[0];
+	assign aux0_in[ 1]=1'b0;          assign aux0_oen[ 1]=1'b1;         assign vin_data[ 1]=aux0_out[1];
+	assign aux0_in[ 2]=1'b0;          assign aux0_oen[ 2]=1'b1;         assign vin_data[ 2]=aux0_out[2];
+	assign aux0_in[ 3]=1'b0;          assign aux0_oen[ 3]=1'b1;         assign vin_data[ 3]=aux0_out[3];
+	assign aux0_in[ 4]=1'b0;          assign aux0_oen[ 4]=1'b1;         assign vin_data[ 4]=aux0_out[4];
+	assign aux0_in[ 5]=1'b0;          assign aux0_oen[ 5]=1'b1;         assign vin_data[ 5]=aux0_out[5];
+	assign aux0_in[ 6]=1'b0;          assign aux0_oen[ 6]=1'b1;         assign vin_data[ 6]=aux0_out[6];
+	assign aux0_in[ 7]=1'b0;          assign aux0_oen[ 7]=1'b1;         assign vin_data[ 7]=aux0_out[7];
+	assign aux0_in[ 8]=1'b0;          assign aux0_oen[ 8]=1'b1;         assign vin_data[ 8]=aux0_out[8];
+	assign aux0_in[ 9]=1'b0;          assign aux0_oen[ 9]=1'b1;         assign vin_data[ 9]=aux0_out[9];
+	assign aux0_in[10]=1'b0;          assign aux0_oen[10]=1'b1;         assign vin_data[10]=aux0_out[10];
+	assign aux0_in[11]=1'b0;          assign aux0_oen[11]=1'b1;         assign vin_data[11]=aux0_out[11];     
+	*/
+	gpio_init(PORTC,0x007e);//set gpio[17-22] aux0
+	/*
+	
+	assign	pio_in[17]  =   GPIO_1[14] ;  assign	GPIO_1[14] = pio_oen[17]? 1'bz:	pio_out[17] ;    // vin_rstn
+	assign pio_in[18]  =   GPIO_1[16] ;  assign	GPIO_1[16] = pio_oen[18]? 1'bz: pio_out[18] ;    // VIN DE
+	assign pio_in[19]  =	GPIO_1[17] ;  assign	GPIO_1[17] = pio_oen[19]? 1'bz: pio_out[19] ; 	 // VIN HSYN
+	assign pio_in[20]  =	GPIO_1[18] ;  assign	GPIO_1[18] = pio_oen[20]? 1'bz: pio_out[20] ;    // VIN VSYN
+	assign pio_in[21]  =	GPIO_CLKIN_N1;//assign	GPIO_1[15]	=	pio_oen[39]? 1'bz: pio_out[39];  // VIN Pixel CLK
+	assign	pio_in[22]  =	GPIO_CLKOUT_N1;assign	GPIO_CLKOUT_N1=pio_oen[22]?1'bz:pio_out[22] ;    // VIN XCLK
+	assign	pio_in[39]  =   GPIO_1[15] ;  assign	GPIO_1[15] = pio_oen[39]? 1'bz: pio_out[39] ;    // tRIGGER	 
+
+	assign aux0_in[17]=vin_rstn;      assign aux0_oen[17]=1'b0;
+	assign aux0_in[18]=1'b0;          assign aux0_oen[18]=1'b1;        assign vin_de  =aux0_out[18];
+	assign aux0_in[19]=1'b0;          assign aux0_oen[19]=1'b1;        assign vin_vsync  =aux0_out[19]; 
+	assign aux0_in[20]=1'b0;          assign aux0_oen[20]=1'b1;        assign vin_hsync   =aux0_out[20]; 
+	assign aux0_in[21]=1'b0;          assign aux0_oen[21]=1'b1;        assign vin_clk_in =aux0_out[21]; 
+	assign aux0_in[22]=vin_xck;       assign aux0_oen[22]=1'b0;        
+	*/
+	
+	/*spi2*/
+	gpio_init_gpio(PORTB, 0xff);//set io[8-15] as gpio pins
+	
+	/*
+	//------------------------------------------------------------------
+	// GPIO add by xiaoyang
+	//------------------------------------------------------------------
+	assign	pio_in[12]	=   GPIO_0[ 12] ;  assign	GPIO_0[ 12] = pio_oen[12]	? 1'bz: pio_out[12]	; 
+	assign	pio_in[13]	=   GPIO_0[ 13] ;  assign	GPIO_0[ 13] = pio_oen[13]	? 1'bz: pio_out[13]	; 	
+	assign	pio_in[14]	=   GPIO_0[ 14] ;  assign	GPIO_0[ 14] = pio_oen[14]	? 1'bz: pio_out[14]	; 	
+	assign	pio_in[15]	=   GPIO_0[ 15] ;  assign	GPIO_0[ 15] = pio_oen[15]	? 1'bz: pio_out[15]	; 	
+	assign	pio_in[16]	=   GPIO_0[ 16] ;  assign	GPIO_0[ 16] = pio_oen[16]	? 1'bz: pio_out[16]	; 	
+	//GOIO 39-43
+	assign	pio_in[39]  =   GPIO_0[17] ;  assign	GPIO_0[17] = pio_oen[39]? 1'bz: pio_out[39] ;	 
+	assign	pio_in[40]  =   GPIO_0[18] ;  assign	GPIO_0[18] = pio_oen[40]? 1'bz: pio_out[40] ;	 
+	assign	pio_in[41]  =   GPIO_0[19] ;  assign	GPIO_0[19] = pio_oen[41]? 1'bz: pio_out[41] ;	 
+	assign	pio_in[42]  =   GPIO_0[20] ;  assign	GPIO_0[20] = pio_oen[40]? 1'bz: pio_out[42] ;	 
+	assign	pio_in[43]  =   GPIO_0[21] ;  assign	GPIO_0[21] = pio_oen[41]? 1'bz: pio_out[43] ;	 
+	*/
+	gpio_init_gpio(PORTF, 0x0C);
+	/*gpio 40 test*/
+	gpio_make_in(PORTF,0x01);
+	gpio_make_out(PORTF,0x02);
+	
+	/*led*/
+	//led_init();
+	//led_off(LEDG0);
+	//led_off(LEDG1);
+
+	/*spi init for RF*/
+	printf("spi init begin ..\n");
+	spi2_init();
+	//spi2_test();
+	printf("spi init end...\n");
+
+	/*RF init*/
+	//RF_CHIP_INITIALIZE();
+	//printf("RF_CHIP_INITIALIZE over..\n");
+	//netconfig();
+	printf("netconfig over..\n");
+	
+	/*RF test*/
+	printf("FS test begin...\n");
+	//fs_test();
+	printf("FS test end...\n");
+	
+	/*ck_gen vin open*/
+	ck_enable(CTR_VIN);	
+	//gpio_make_out(PORTB, SCCB_CLK);
+	//gpio_make_out(PORTB, SCCB_DATA);
+	//gpio_set(PORTB,SCCB_CLK);
+	//gpio_clr(PORTB,SCCB_DATA);
+	
+	/*big or little endien check*/
+	//testing();
+	if(check_cpu_endien() == BIG_ENDIEND){
+		printf("CPU endiend:big.\n");
+	}else{
+		printf("CPU endiend:little.\n");
+	}
+	printf("system init end.\n");
+}
+
+
+/*
+ * Author: xiaoyang
+ * Created: 2011-9-22
+ * Parameters:
+ * Description:entry of program
+ */
+int main(void) {
+	unsigned int i = 0;
+	/*configueration*/
+	//system_init();
+
+	/*ecos work*/
+	dprintf("\neCos start:[ok]\n");
+
+	/*init and setup working threads*/
+	cyg_thread_create(
+		2,/*priority*/ 
+		vtsk_handle,/*entry*/ 
+		(cyg_addrword_t) 0,/*entry data*/
+		"video_thread",/*thread name*/
+		(void *) vtsk_stack,/*stack base*/ 
+		VTASK_STK_SIZE,/*stack size*/
+		&vtsk_hdl, /*thread handle*/
+		&vtsk_thr);/*thread entity address*/
+
+	cyg_thread_create(
+		3, 
+		systsk_handle,
+		(cyg_addrword_t) 0, 
+		"sysctrl_thread",
+		(void *) systsk_stack, 
+		SYSTSK_STK_SIZE, 
+		&systsk_hdl, 
+		&systsk_thr);
+	
+	/*setup*/
+	cyg_thread_resume(vtsk_hdl);
+	cyg_thread_resume(systsk_hdl);
+	cyg_scheduler_start();
+
+	dprintf("@ok,main exit(0).\n");
+
+	/*do some clean works*/
+
+	return 0;
+}
+
